@@ -16,15 +16,20 @@ private:
     IntNode * nodePointer;
     
 public:
+    //constructors
+    IntNode();
+    IntNode(int value);
+    /*
+     Creates an IntNode with a specified value and reference
+     to the next node.
+     */
+    IntNode(int value, IntNode* nextNode);
+    //methods
     int getNodeData();
     IntNode* getNodePointer();
-    void setNodeData(int);
-    void setNodePointer(IntNode*);
+    void setNodeData(int value);
+    void setNodePointer(IntNode* updatedNode);
     
-    IntNode();
-    IntNode(int);
-    IntNode(int, IntNode*);
-    
-};
+    };
 
 #endif /* IntNode_hpp */

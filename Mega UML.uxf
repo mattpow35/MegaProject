@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>60</y>
+      <w>320</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Timer
+--
+- executionTime : clock_t
+
+--
++ startTimer() : void
++ stopTimer() : void
++ resetTimer() : void
++ displayTimerInformation() : void
++ getExecutionTimeInMicroseconds() : long
+
++ Timer() : constructor</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>300</y>
+      <w>290</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>IntNode
+--
+- nodeData : int
+- nodePointer : IntNode *
+
+--
++ getNodeData() : int
++ getNodePointer() : IntNode *
++ setNodeData(int) : void
++ setNodePointer(IntNode *) : void
+
++ IntNode() : constructor
++ IntNode(int) : constructor
++ IntNode(int, IntNode *) : constructor
+
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>10</y>
+      <w>200</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>ClassName
+--
+data members
+--
+methods and constructors</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

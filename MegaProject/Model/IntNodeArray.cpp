@@ -41,3 +41,18 @@ int IntNodeArray :: getFromIndex(int index)
     
     return value;
 }
+
+void IntNodeArray :: setAtIndex(int index, int value)
+{
+    assert(index >= 0 && index < size);
+    
+    IntNode* current = head;
+    
+    for(int position = 0; position < index; position ++)
+    {
+        current = current->getNodePointer();
+    }
+    
+    current->setNodeData(value);
+
+}

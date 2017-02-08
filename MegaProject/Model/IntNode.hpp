@@ -24,12 +24,14 @@ public:
      to the next node.
      */
     IntNode(int value, IntNode* nextNode);
+    
     //methods
     int getNodeData();
     IntNode* getNodePointer();
+    
     void setNodeData(int value);
     void setNodePointer(IntNode* updatedNode);
     
-    };
+};
 
 #endif /* IntNode_hpp */

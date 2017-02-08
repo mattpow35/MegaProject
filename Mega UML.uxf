@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>300</x>
-      <y>60</y>
+      <x>10</x>
+      <y>30</y>
       <w>320</w>
       <h>180</h>
     </coordinates>
@@ -20,14 +20,19 @@
 + displayTimerInformation() : void
 + getExecutionTimeInMicroseconds() : long
 
-+ Timer() : constructor</panel_attributes>
++ Timer() : constructor
+
+bg=cyan
+transparancy=0
+
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>160</x>
-      <y>300</y>
+      <x>350</x>
+      <y>10</y>
       <w>290</w>
       <h>230</h>
     </coordinates>
@@ -52,8 +57,30 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>30</x>
-      <y>10</y>
+      <x>40</x>
+      <y>250</y>
+      <w>250</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>IntNodeArray
+--
+- head : IntNode* 
+- size : int
+--
++ IntNodeArray(int) : constructor
++ getSize() : int
++ getFromIndex(int) : int
++ setAtIndex(int, int) : void
+
+bg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>20</y>
       <w>200</w>
       <h>160</h>
     </coordinates>

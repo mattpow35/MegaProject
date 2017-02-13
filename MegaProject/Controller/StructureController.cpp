@@ -31,6 +31,11 @@ void StructureController :: testIntArray()
     {
         temp.setAtIndex(spot, spot);
     }
+    
+    for (int spot = 0; spot < temp.getSize(); spot++)
+    {
+        cout << temp.getFromIndex(spot) << " is at " << spot << endl;
+    }
 }
 
 void StructureController :: start()

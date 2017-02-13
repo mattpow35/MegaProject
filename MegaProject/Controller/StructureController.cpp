@@ -14,7 +14,16 @@ using namespace std;
 
 StructureController :: StructureController()
 {
-    
+    wordNode = Node<string>("derpy");
+    numberNode = Node<int>();
+}
+
+void StructureController :: testNodeTypes()
+{
+    cout << "Here is a string node" << endl;
+    cout << wordNode.getNodeData() << endl;
+    cout << "Here is an unitilialized int ndoe" << endl;
+    cout << numberNode.getNodeData() << endl;
 }
 
 void StructureController :: testIntArray()
@@ -42,4 +51,8 @@ void StructureController :: start()
     cout << "Going to test the IntNodeArray" << endl;
     testIntArray();
     cout << "Finished IntArrayNode testing" << endl;
+    
+    cout << "Testing generic nodes" << endl;
+    testNodeTypes();
+    cout << "done testing generic nodes" << endl;
 }

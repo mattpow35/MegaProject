@@ -18,7 +18,7 @@ private:
 public:
     Node<Type>();
     Node<Type>(Type data);
-    Node<Type>(Type data, node<Type>* nextPointer);
+    Node<Type>(Type data, Node<Type>* nextPointer);
     
     Type getNodeData();
     Node<Type>* getNodePointer();
@@ -30,6 +30,7 @@ public:
  Implementation section of hte templated class!
  */
 
+//Constructors
 template <class Type>
 Node<Type> :: Node()
 {
@@ -46,12 +47,14 @@ Node<Type> :: Node(Type value)
 }
 
 template <class Type>
-Node<Type> :: Node(Type value, Node<Type. * nextNode)
+Node<Type> :: Node(Type value, Node<Type>* nextNode)
 {
     this->nodeData = value;
     this->nodePointer = nextNode;
 }
 
+
+//Accesors aka getters/setters
 template <class Type>
 Type Node<Type> :: getNodeData()
 {
@@ -73,13 +76,9 @@ void Node<Type> :: setNodeData(Type value)
 template <class Type>
 void Node<Type> :: setNodePointer(Node<Type>* nextPointer)
 {
-    this->nodePointer = next;
+    this->nodePointer = nextPointer;
 }
 
 #endif /* Node_hpp */
-
-
-
-
 
 

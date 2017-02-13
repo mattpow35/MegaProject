@@ -14,14 +14,12 @@ class IntNode
 private:
     int nodeData;
     IntNode * nodePointer;
-    
 public:
     //constructors
     IntNode();
     IntNode(int value);
     /*
-     Creates an IntNode with a specified value and reference
-     to the next node.
+     Creates an IntNode with a specified value and reference to the next node.
      */
     IntNode(int value, IntNode* nextNode);
     

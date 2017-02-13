@@ -24,7 +24,6 @@ void StructureController :: testIntArray()
     for(int spot =0; spot < 3; spot ++)
     {
         cout << temp.getFromIndex(spot) << " is at " << spot << endl;
-        
     }
     
     for(int spot = 0; spot < 3; spot++)

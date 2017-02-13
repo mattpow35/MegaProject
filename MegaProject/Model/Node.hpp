@@ -21,8 +21,41 @@ public:
     Node<Type>(Type data, node<Type>* nextPointer);
     
     Type getNodeData();
-    Node<Type>* getNodePointer(0);
+    Node<Type>* getNodePointer();
     void setNodeData(Type value);
     void setNodePointer(Node<Type>* nextPointer);
 };
+
+/*
+ Implementation section of hte templated class!
+ */
+
+template <class Type>
+Node<Type> :: Node<Type>()
+{
+    nodePointer = nullptr;
+    //Explicityly NOT initializing nodeData
+    //Because the type is unknown to me. It could be anything.
+}
+
+template <class Type>
+Node<Type> :: Node<Type>(Type value)
+{
+    this->nodeData = value;
+    this->nodePointer = nullptr;
+}
+
+template <class Type>
+Node<Type> :: Node<Type>(Type value, Node<Type. * nextNode)
+{
+    this->nodeData = value;
+    this->nodePointer = nextNode;
+}
+
 #endif /* Node_hpp */
+
+
+
+
+
+

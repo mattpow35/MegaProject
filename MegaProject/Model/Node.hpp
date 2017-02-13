@@ -31,7 +31,7 @@ public:
  */
 
 template <class Type>
-Node<Type> :: Node<Type>()
+Node<Type> :: Node()
 {
     nodePointer = nullptr;
     //Explicityly NOT initializing nodeData
@@ -39,17 +39,41 @@ Node<Type> :: Node<Type>()
 }
 
 template <class Type>
-Node<Type> :: Node<Type>(Type value)
+Node<Type> :: Node(Type value)
 {
     this->nodeData = value;
     this->nodePointer = nullptr;
 }
 
 template <class Type>
-Node<Type> :: Node<Type>(Type value, Node<Type. * nextNode)
+Node<Type> :: Node(Type value, Node<Type. * nextNode)
 {
     this->nodeData = value;
     this->nodePointer = nextNode;
+}
+
+template <class Type>
+Type Node<Type> :: getNodeData()
+{
+    return nodeData;
+}
+
+template <class Type>
+Node<Type>* Node<Type> :: getNodePointer()
+{
+    return nodePointer;
+}
+
+template <class Type>
+void Node<Type> :: setNodeData(Type value)
+{
+    this->NodeData = value;
+}
+
+template <class Type>
+void Node<Type> :: setNodePointer(Node<Type>* nextPointer)
+{
+    this->nodePointer = next;
 }
 
 #endif /* Node_hpp */

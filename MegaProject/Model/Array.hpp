@@ -19,6 +19,7 @@ private:
     Node<Type> * front;
     int size;
 public:
+    Array<Type>();
     Array<Type>(int size);
     int getSize();
     Type getFromIndex(int index);
@@ -28,6 +29,13 @@ public:
 //Implementation section
 
 //Creates an array of specified size by linking Node<Type> together
+template <class Type>
+Array<Type> :: Array()
+{
+    //DO NOT USE!!!!
+    //implemented for compilation purposes
+}
+
 
 template <class Type>
 Array<Type> :: Array(int size)

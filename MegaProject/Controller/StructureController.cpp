@@ -17,7 +17,7 @@ StructureController :: StructureController()
 {
     wordNode = Node<string>("derpy");
     numberNode = Node<int>();
-    numberArray = Array<int>();
+   // numberArray = Array<int>(9);
 }
 
 void StructureController :: testNodeTypes()
@@ -52,7 +52,7 @@ void StructureController :: testArrayTemplate()
 {
     cout << "ArrayTemplate" << endl;
     int test[9];
-    numberArray = Array<int>(9);
+   // numberArray = Array<int>(9);
 }
 
 void StructureController :: start()

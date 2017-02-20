@@ -36,7 +36,6 @@
 		B877F4941E4B7D9B003CF139 /* StructureController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StructureController.hpp; path = Controller/StructureController.hpp; sourceTree = "<group>"; };
 		B8A2056B1E5208F7007421F6 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Node.hpp; path = Model/Node.hpp; sourceTree = "<group>"; };
 		FF972EF61E5B8657002646B8 /* Array.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Array.hpp; path = Model/Array.hpp; sourceTree = "<group>"; };
-		FF972EF71E5B8760002646B8 /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +92,6 @@
 			children = (
 				B877F4941E4B7D9B003CF139 /* StructureController.hpp */,
 				B877F4931E4B7D9B003CF139 /* StructureController.cpp */,
-				FF972EF71E5B8760002646B8 /* Model */,
 				B877F4901E4B7D39003CF139 /* Runner.cpp */,
 			);
 			name = Controller;

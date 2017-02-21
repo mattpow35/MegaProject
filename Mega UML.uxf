@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>10</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>10</x>
-      <y>30</y>
-      <w>320</w>
-      <h>180</h>
+      <x>72</x>
+      <y>0</y>
+      <w>288</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>Timer
 --
@@ -31,10 +31,10 @@ transparancy=0
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>400</x>
-      <y>230</y>
-      <w>290</w>
-      <h>230</h>
+      <x>81</x>
+      <y>180</y>
+      <w>261</w>
+      <h>207</h>
     </coordinates>
     <panel_attributes>IntNode
 --
@@ -57,10 +57,10 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>30</x>
-      <y>230</y>
-      <w>260</w>
-      <h>150</h>
+      <x>522</x>
+      <y>225</y>
+      <w>234</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>IntNodeArray
 --
@@ -79,10 +79,10 @@ bg=red
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>390</x>
-      <y>480</y>
-      <w>450</w>
-      <h>250</h>
+      <x>18</x>
+      <y>423</y>
+      <w>405</w>
+      <h>225</h>
     </coordinates>
     <panel_attributes>Node&lt;Type&gt;
 --
@@ -107,10 +107,50 @@ bg=yellow
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>670</x>
-      <y>40</y>
-      <w>200</w>
-      <h>160</h>
+      <x>513</x>
+      <y>414</y>
+      <w>441</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>Array&lt;Type&gt;
+--
+- front : Node&lt;Type&gt; *
+- size : int
+--
++ Array() : default contructor
++ Array&lt;Type&gt;(int size) : constructor
+
++ ~Array&lt;Type&gt;() : default destructor
++ Array&lt;Type&gt;(const Array&lt;Type&gt; &amp; toBeCopied) : copy constructor
+
++ getSize() const : int
++ getFront() const : Node&lt;Type&gt; *
+
++ getFromIndex(int index) : Type
++ setAtIndex(int index, Type value) : void
+
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>333</x>
+      <y>279</y>
+      <w>207</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1..n</panel_attributes>
+    <additional_attributes>210.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>684</x>
+      <y>27</y>
+      <w>180</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>ClassName
 --
@@ -122,13 +162,13 @@ methods and constructors</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>280</x>
-      <y>300</y>
-      <w>140</w>
-      <h>40</h>
+      <x>414</x>
+      <y>540</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m2=1..n</panel_attributes>
-    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>

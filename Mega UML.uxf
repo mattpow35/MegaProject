@@ -22,7 +22,7 @@
 
 + Timer() : constructor
 
-bg=cyan
+bg=gray
 transparancy=0
 
 </panel_attributes>
@@ -51,7 +51,7 @@ transparancy=0
 + IntNode(int) : constructor
 + IntNode(int, IntNode *) : constructor
 
-bg=orange</panel_attributes>
+bg=pink</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -100,7 +100,8 @@ Accessors
 + getNodePointer() : Node&lt;Type&gt;*
 + setNodeData(Type value) : void
 + setNodePointer(Node&lt;Type&gt;* next) : void
-bg=yellow
+bg=cyan
+
 </panel_attributes>
     <additional_attributes/>
   </element>

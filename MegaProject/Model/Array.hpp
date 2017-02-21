@@ -19,9 +19,19 @@ private:
     Node<Type> * front;
     int size;
 public:
+    //constructor
     Array<Type>();
     Array<Type>(int size);
-    int getSize();
+    
+    //Destructor
+    ~Array<Type>();
+    //Copy Constructor
+    Array<Type>(const Array<Type> & toBeCopied);
+    //Assignment Operator overload
+    
+    //Methods
+    int getSize() const;
+    Node<Type> * getFront() const;
     Type getFromIndex(int index);
     void setAtIndex(int index, Type value);
 };

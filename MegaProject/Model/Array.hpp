@@ -82,20 +82,26 @@ Type Array<Type> :: getFromIndex(int index)
 template <class Type>
 void Array<Type> :: setAtIndex(int index, Type value)
 {
-    asser(index >= 0 && index < size);
+    assert(index >= 0 && index < size);
     Node<Type> * current = front;
     for(int position =0; position < index; position ++)
     {
         current = current->getNodePointer();
     }
     
-    current = current->getNodeData();
+    current->setNodeData(value);
 }
 
 template <class Type>
-int Array<Type> :: getSize()
+int Array<Type> :: getSize() const
 {
     return size;
+}
+
+template <class Type>
+Node<Type> * Array<Type> :: getFront() const
+{
+    return front;
 }
 
 

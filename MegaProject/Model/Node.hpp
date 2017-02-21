@@ -70,7 +70,7 @@ Node<Type>* Node<Type> :: getNodePointer()
 template <class Type>
 void Node<Type> :: setNodeData(Type value)
 {
-    this->NodeData = value;
+    this->nodeData = value;
 }
 
 template <class Type>

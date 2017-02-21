@@ -148,16 +148,30 @@ m2=1..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>684</x>
-      <y>27</y>
-      <w>180</w>
-      <h>144</h>
+      <x>18</x>
+      <y>720</y>
+      <w>423</w>
+      <h>243</h>
     </coordinates>
-    <panel_attributes>ClassName
+    <panel_attributes>Model : List&lt;Type&gt;
 --
-data members
+- size : int
+- front : Node&lt;Type&gt; *
 --
-methods and constructors</panel_attributes>
++ List&lt;Type&gt;() : constructor
++ List&lt;Type&gt;(const List&lt;Type&gt; &amp; source) : copy constructor
++ ~List&lt;Type&gt;() : destructor
+
++ addAtIndex(int index, Type value) : void
++ add(Type, value) : void
++ remove(int index) : Type
++ setAtIndex(int index, Type data) : Type
++ getFromIndex(int index) : Type
++ contains(Type data) : bool
++ getSize() const : int
++ getFront() const : Node&lt;Type&gt;*
+
+bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -171,5 +185,32 @@ methods and constructors</panel_attributes>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m2=1..n</panel_attributes>
     <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>702</x>
+      <y>45</y>
+      <w>180</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>ClassName
+--
+data members
+--
+methods and constructors</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>639</y>
+      <w>45</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>

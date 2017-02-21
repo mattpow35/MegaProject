@@ -148,8 +148,8 @@ m2=1..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>18</x>
-      <y>720</y>
+      <x>531</x>
+      <y>729</y>
       <w>423</w>
       <h>243</h>
     </coordinates>
@@ -163,7 +163,7 @@ m2=1..n</panel_attributes>
 + ~List&lt;Type&gt;() : destructor
 
 + addAtIndex(int index, Type value) : void
-+ add(Type, value) : void
++ add(Type value) : void
 + remove(int index) : Type
 + setAtIndex(int index, Type data) : Type
 + getFromIndex(int index) : Type
@@ -204,13 +204,13 @@ methods and constructors</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>216</x>
-      <y>639</y>
-      <w>45</w>
-      <h>99</h>
+      <x>414</x>
+      <y>576</y>
+      <w>342</w>
+      <h>171</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m2=0..n</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+    <additional_attributes>360.0;170.0;360.0;120.0;70.0;120.0;70.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>

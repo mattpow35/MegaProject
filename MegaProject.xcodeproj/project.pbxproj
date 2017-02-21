@@ -34,6 +34,7 @@
 		B877F4901E4B7D39003CF139 /* Runner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Runner.cpp; path = Controller/Runner.cpp; sourceTree = "<group>"; };
 		B877F4931E4B7D9B003CF139 /* StructureController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StructureController.cpp; path = Controller/StructureController.cpp; sourceTree = "<group>"; };
 		B877F4941E4B7D9B003CF139 /* StructureController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StructureController.hpp; path = Controller/StructureController.hpp; sourceTree = "<group>"; };
+		B87FC1AB1E5CA375001A02F9 /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = List.h; path = Model/List.h; sourceTree = "<group>"; };
 		B8A2056B1E5208F7007421F6 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Node.hpp; path = Model/Node.hpp; sourceTree = "<group>"; };
 		FF972EF61E5B8657002646B8 /* Array.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Array.hpp; path = Model/Array.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +78,7 @@
 		B85F54EC1E48D5F000E3DE61 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B87FC1AB1E5CA375001A02F9 /* List.h */,
 				FF972EF61E5B8657002646B8 /* Array.hpp */,
 				B8A2056B1E5208F7007421F6 /* Node.hpp */,
 				B85F54EA1E48D5E800E3DE61 /* IntNode.hpp */,

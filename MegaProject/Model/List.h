@@ -36,5 +36,30 @@ public:
     int getSize() const;
     Node<Type>* getFront() const;
 };
+    
+
+    
+template <class Type>
+List<Type> :: List<Type()
+{
+    
+        
+}
+    
+template <class Type>
+List<Type> :: List<Type>(const List<Type> & source)
+{
+        
+}
+
+template <class Type>
+List<Type> :: ~List<Type>()
+{
+        
+}
+    
+tempalate <class Type>
+
+    
 
 #endif /* List_h */

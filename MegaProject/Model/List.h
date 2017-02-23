@@ -92,6 +92,23 @@ void List<Type> :: addFront(Type value)
     
     size++;
 }
+
+template <class Type>
+void List<Type> :: addEnd(Type value)
+{
+    Node<Type> * added = new Node<Type>(data);
+    if(size == 0)
+    {
+        this->front = added;
+        this->end = added;
+    }
+    else
+    {
+        end->setNodePointer(added);
+        this->end = added;
+    }
+    size++;
+}
     
 
 #endif /* List_h */

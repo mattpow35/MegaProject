@@ -17,7 +17,8 @@ class List
 {
 private:
     int size;
-    Node<Type.* front;
+    Node<Type>* front;
+    Node<Type>* end;
 public:
     //constructor
     List<Type>();
@@ -35,6 +36,7 @@ public:
     bool contains(Type data);
     int getSize() const;
     Node<Type>* getFront() const;
+    Node<Type>* getEnd() const;
 };
     
 
@@ -42,8 +44,9 @@ public:
 template <class Type>
 List<Type> :: List<Type()
 {
-    
-        
+    size = 0;
+    this->front = nullptr;
+    this->end = nullptr;
 }
     
 template <class Type>

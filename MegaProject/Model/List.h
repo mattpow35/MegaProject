@@ -29,11 +29,13 @@ public:
     
     //Methods
     void addAtIndex(int index, Type value);
-    void add(Type value);
+    void addFront(Type value);
+    void addEnd(Type value);
     Type remove(int index);
     Type setAtIndex(int index, Type data);
     Type getFromIndex(int index);
     bool contains(Type data);
+    
     int getSize() const;
     Node<Type>* getFront() const;
     Node<Type>* getEnd() const;
@@ -42,9 +44,9 @@ public:
 
     
 template <class Type>
-List<Type> :: List<Type()
+List<Type> :: List<Type>()
 {
-    size = 0;
+    this->size = 0;
     this->front = nullptr;
     this->end = nullptr;
 }
@@ -62,7 +64,34 @@ List<Type> :: ~List<Type>()
 }
     
 tempalate <class Type>
-
+void List<Type> :: addFront(Type value)
+{
+    //default case when adding to an empty list.
+    if(size == 0)
+    {
+        //create thew new node giving it value from method parameter.
+        Node<Type> * first = new Node<Type>(value);
+        //front and end now point to the new/first/only node in the list.
+        this->front = first;
+        this->end = first;
+    }
+    //done when the list is not empty
+    else
+    {
+        //creates the new node to be added with the value from method parameter
+        //and makes it point to front.
+        Node<Type> * newFirst = new Node<Type>(value, front);
+        //or
+        //Node<Type> * newFirst = new Node<Type>();
+        //newFirst->setNodeData(value);
+        //newFirst->setNodePointer(front);
+        
+        //front now will point to the new node.
+        front = newFirst;
+    }
+    
+    size++;
+}
     
 
 #endif /* List_h */

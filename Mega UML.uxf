@@ -149,14 +149,15 @@ m2=1..n</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>531</x>
-      <y>729</y>
+      <y>702</y>
       <w>423</w>
-      <h>243</h>
+      <h>252</h>
     </coordinates>
     <panel_attributes>Model : List&lt;Type&gt;
 --
 - size : int
 - front : Node&lt;Type&gt; *
+- end : Node&lt;Type&gt; *
 --
 + List&lt;Type&gt;() : constructor
 + List&lt;Type&gt;(const List&lt;Type&gt; &amp; source) : copy constructor
@@ -170,6 +171,7 @@ m2=1..n</panel_attributes>
 + contains(Type data) : bool
 + getSize() const : int
 + getFront() const : Node&lt;Type&gt;*
++ getEnd() const : Node&lt;Type&gt; *
 
 bg=yellow</panel_attributes>
     <additional_attributes/>
@@ -205,12 +207,12 @@ methods and constructors</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>414</x>
-      <y>576</y>
+      <y>567</y>
       <w>342</w>
-      <h>171</h>
+      <h>153</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m2=0..n</panel_attributes>
-    <additional_attributes>360.0;170.0;360.0;120.0;70.0;120.0;70.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>360.0;150.0;360.0;120.0;70.0;120.0;70.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>

@@ -109,6 +109,43 @@ void List<Type> :: addEnd(Type value)
     }
     size++;
 }
+
+//This method will add a node at an index with a certain value both passed as a parameter.
+//if the size is the same as the index add to end is called.
+//if the size is 0 add to front is called.
+//if the index is neither at the front or end then a new node is created with the value passed in parameter.
+//two more nodes are created to keep track of position in the list to find out where to add the new node.
+//the node before the index is now pointing to the new node and the new node will then point to the
+//next node in the list.
+template <class Type>
+void List<Type> :: addAtIndex(int index, Type value)
+{
+    assert(index >= 0 && index <= size);
+    if(size == index)
+    {
+        addEnd(value);
+    }
+    else if(size == 0)
+    {
+        addFront(value);
+    }
+    else
+    {
+        Node<Type> * insertedNode = new Node<Type>(value);
+        Node<Type> * current = front;
+        Node<Type> * previous = nullptr;
+        
+        for(int position = 0; position < index; position ++)
+        {
+            previous = current;
+            current = current->getNodePointer();
+        }
+        
+        previous->setNodePointer(insertedNode);
+        insertedNode->setNodePointer(current);
     
+        size++;
+    }
+}
 
 #endif /* List_h */

@@ -91,6 +91,16 @@ void StructureController :: testList()
     
     cout << "Size should read 3 and is " << sample.getSize() << endl;
     
+    cout << "removing second spot" << endl;
+    cout << "the removed data should be 2 and is " << sample.remove(1) << endl;
+    cout << "size should be 2 and is " << sample.getSize() << endl;
+    cout << "list should read 1 3" << endl;
+    for (int index = 0; index < sample.getSize(); index ++ )
+    {
+        cout << sample.getFromIndex(index) << endl;
+    }
+    
+    
     
 }
 

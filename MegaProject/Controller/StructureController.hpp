@@ -12,6 +12,7 @@
 #include "../Model/Node.hpp"
 #include "Array.hpp"
 #include <string>
+#include "List.h"
 
 using namespace std;
 
@@ -21,11 +22,13 @@ private:
     Node<int> numberNode;
     Node<string> wordNode;
     Array<int> numberArray;
+    List<int> sample;
     
     void testIntArray();
     void testNodeTypes();
     void testArrayTemplate();
     void testAdvancedFeatures();
+    void testList();
 public:
     StructureController();
     void start();

@@ -12,7 +12,7 @@
 #include <assert.h>
 #include "Node.hpp"
 
-templat <class Type>
+template <class Type>
 class List
 {
 private:
@@ -44,7 +44,7 @@ public:
 
     
 template <class Type>
-List<Type> :: List<Type>()
+List<Type> :: List()
 {
     this->size = 0;
     this->front = nullptr;
@@ -52,7 +52,7 @@ List<Type> :: List<Type>()
 }
     
 template <class Type>
-List<Type> :: List<Type>(const List<Type> & source)
+List<Type> :: List(const List<Type> & source)
 {
         
 }
@@ -60,10 +60,22 @@ List<Type> :: List<Type>(const List<Type> & source)
 template <class Type>
 List<Type> :: ~List<Type>()
 {
-        
+    Node<Type> * destruction = front;
+    while(front != nullptr)
+    {
+        front = front->getNodePointer();
+        delete destruction;
+        destruction = front;
+    }
+}
+
+template <class Type>
+int List<Type> :: getSize() const
+{
+    return this->size;
 }
     
-tempalate <class Type>
+template <class Type>
 void List<Type> :: addFront(Type value)
 {
     //default case when adding to an empty list.
@@ -96,7 +108,7 @@ void List<Type> :: addFront(Type value)
 template <class Type>
 void List<Type> :: addEnd(Type value)
 {
-    Node<Type> * added = new Node<Type>(data);
+    Node<Type> * added = new Node<Type>(value);
     if(size == 0)
     {
         this->front = added;
@@ -197,5 +209,43 @@ Type List<Type> :: remove(int index)
     size--;
     return removed;
 }
+
+template <class Type>
+Type List<Type> :: setAtIndex(int index, Type data)
+{
+    assert(index >= 0 && index < size);
+    Type removedData;
+    
+    Node<Type> * current = front;
+    
+    for(int spot = 0; spot < index; spot++)
+    {
+        current = current->getNodePointer;
+    }
+    
+    removedData = current->getNodeData();
+    current->setNodeData(data);
+    
+    return removedData;
+}
+
+template <class Type>
+Type List<Type> :: getFromIndex(int index)
+{
+    assert(index >= 0 && index < size);
+    Type information;
+    
+    Node<Type> * current = front;
+    for (int position = 0; position < index; position ++ )
+    {
+        current = current->getNodePointer();
+    }
+    
+    information = current->getNodeData();
+    
+    return information;
+}
+
+
 
 #endif /* List_h */

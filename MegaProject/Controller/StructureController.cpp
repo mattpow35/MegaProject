@@ -10,6 +10,7 @@
 #include <iostream>
 #include "IntNodeArray.hpp"
 #include "Array.hpp"
+#include "List.h"
 
 using namespace std;
 
@@ -75,6 +76,24 @@ void StructureController:: testAdvancedFeatures()
     copiedWords.setAtIndex(3, "Changed the contents of the copied Array");
 }
 
+void StructureController :: testList()
+{
+    List<int> sample;
+    sample.addFront(2);
+    sample.addEnd(3);
+    sample.addFront(1);
+    cout << "This should say 1 2 3" << endl;
+    
+    for (int index = 0; index < sample.getSize(); index ++ )
+    {
+        cout << sample.getFromIndex(index) << endl;
+    }
+    
+    cout << "Size should read 3 and is " << sample.getSize() << endl;
+    
+    
+}
+
 void StructureController :: start()
 {
 //    cout << "Going to test the IntNodeArray" << endl;
@@ -85,7 +104,9 @@ void StructureController :: start()
 //    testNodeTypes();
 //    cout << "done testing generic nodes" << endl;
     
-    cout << "testing advanced features." << endl;
-    testAdvancedFeatures();
-    cout << "done testing advanced features." << endl;
+//    cout << "testing advanced features." << endl;
+//    testAdvancedFeatures();
+//    cout << "done testing advanced features." << endl;
+    
+    testList();
 }

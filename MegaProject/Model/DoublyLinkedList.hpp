@@ -47,7 +47,6 @@ int DoublyLinkedList<Type> :: getSize() const
     
 }
 
-
 template <class Type>
 BiDirectionalNode<Type> * DoublyLinkedList<Type> :: getFront() const
 {

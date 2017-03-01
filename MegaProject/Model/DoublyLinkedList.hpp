@@ -32,11 +32,33 @@ public:
 
 
 template <class Type>
-DoublyLinkedList<Type> :; DoublyLinkedList()
+DoublyLinkedList<Type> :: DoublyLinkedList()
 {
     this->size = 0;
     this->front = nullptr;
     this->end = nullptr;
 }
+
+
+template <class Type>
+int DoublyLinkedList<Type> :: getSize() const
+{
+    return this->size;
+    
+}
+
+
+template <class Type>
+BiDirectionalNode<Type> * DoublyLinkedList<Type> :: getFront() const
+{
+    return this->front;
+}
+
+template <class Type>
+BiDirectionalNode<Type> * DoublyLinkedList<Type> :: getEnd() const
+{
+    return this->end;
+}
+
 
 #endif /* DoublyLinkedList_h */

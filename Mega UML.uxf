@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>448</x>
+      <x>602</x>
       <y>0</y>
       <w>224</w>
       <h>126</h>
@@ -31,7 +31,7 @@ transparancy=0
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>455</x>
+      <x>609</x>
       <y>140</y>
       <w>203</w>
       <h>161</h>
@@ -57,7 +57,7 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>798</x>
+      <x>952</x>
       <y>175</y>
       <w>182</w>
       <h>105</h>
@@ -79,7 +79,7 @@ bg=red
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>189</x>
+      <x>343</x>
       <y>322</y>
       <w>315</w>
       <h>175</h>
@@ -108,8 +108,8 @@ bg=cyan
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>791</x>
-      <y>322</y>
+      <x>952</x>
+      <y>315</y>
       <w>343</w>
       <h>189</h>
     </coordinates>
@@ -136,7 +136,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>651</x>
+      <x>805</x>
       <y>217</y>
       <w>161</w>
       <h>28</h>
@@ -148,7 +148,7 @@ m2=1..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>805</x>
+      <x>959</x>
       <y>546</y>
       <w>329</w>
       <h>217</h>
@@ -179,19 +179,19 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>497</x>
+      <x>651</x>
       <y>413</y>
-      <w>308</w>
+      <w>315</w>
       <h>28</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m2=1..n</panel_attributes>
-    <additional_attributes>420.0;20.0;10.0;10.0</additional_attributes>
+    <additional_attributes>430.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>182</x>
+      <x>336</x>
       <y>546</y>
       <w>602</w>
       <h>273</h>
@@ -203,13 +203,14 @@ m2=1..n</panel_attributes>
 - previousPointer : BiDirectionalNode&lt;Type&gt; *
 
 --
+Constructors
 + BiDirectionalNode&lt;Type&gt;() : constructor
 + BiDirectionalNode&lt;Type&gt;(Type value) : constructor
 + BiDirectionalNode&lt;Type&gt;(Type value, BiDirectionalNode&lt;Type&gt; * next) : constructor
 + BiDirectionalNode&lt;Type&gt;(Type value,BiDirectionalNode&lt;Type&gt; * next, BiDirectionalNode&lt;Type&gt; * previous): constructor
 
 
-
+Accessors
 + getNodeData() : Type
 + setNodeData() : void
 + getNextPointer() : BiDirectionalNode&lt;Type&gt; *
@@ -223,7 +224,7 @@ bg=magenta</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>497</x>
+      <x>651</x>
       <y>434</y>
       <w>483</w>
       <h>126</h>
@@ -235,10 +236,10 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>994</x>
+      <x>1148</x>
       <y>21</y>
       <w>140</w>
-      <h>112</h>
+      <h>182</h>
     </coordinates>
     <panel_attributes>ClassName
 --
@@ -250,12 +251,56 @@ methods and constructors</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>301</x>
+      <x>455</x>
       <y>490</y>
       <w>21</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>336</x>
+      <y>868</y>
+      <w>546</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>DoubleLinkedList&lt;Type&gt;
+--
+- size : int
+- front : BiDirectionalNode&lt;Type&gt; *
+- end : BiDirectionalNode&lt;Type&gt; *
+--
++ DoubleLinkedList&lt;Type&gt;() : constructor
++ DoubleLinkedList&lt;Type&gt;(const DoubleLinkedList&lt;Type&gt; &amp; source) : copy constructor
++ ~DoubleLinkedList&lt;Type&gt;() : destructor
+
++ addFront(Type value) : void 
++ addEnd(Type value) : void
++ addAtIndex(int index, Type value) : void
++ remove(int index) : Type
++ setAtIndex(int index, Type value) : Type
++ getFromIndex(int index) : Type
++ contains(Type data) : bool
++ getSize() const : int
++ getFront() const : BiDirectionalNode&lt;Type&gt; *
++ getEnd() const : BiDirectionalNode&lt;Type&gt; *
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>574</x>
+      <y>812</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>

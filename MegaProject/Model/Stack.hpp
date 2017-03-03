@@ -8,9 +8,10 @@
 
 #ifndef Stack_h
 #define Stack_h
+#include "DoublyLinkedList.hpp"
 
 template <class Type>
-class Stack : DoublyLinkedList<Type>
+class Stack : public DoublyLinkedList<Type>
 {
 private:
 public:

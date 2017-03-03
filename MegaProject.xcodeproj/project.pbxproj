@@ -39,6 +39,9 @@
 		B87FC1AB1E5CA375001A02F9 /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = List.h; path = Model/List.h; sourceTree = "<group>"; };
 		B8A2056B1E5208F7007421F6 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Node.hpp; path = Model/Node.hpp; sourceTree = "<group>"; };
 		B8DD917A1E648CFB00939DA5 /* BiDirectionalNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BiDirectionalNode.hpp; sourceTree = "<group>"; };
+		B8F450E91E69C908007219B0 /* DoubleList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DoubleList.hpp; path = Model/DoubleList.hpp; sourceTree = "<group>"; };
+		B8F450EA1E69C92B007219B0 /* CircularList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = CircularList.hpp; path = Model/CircularList.hpp; sourceTree = "<group>"; };
+		B8F450EB1E69C93C007219B0 /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Queue.hpp; path = Model/Queue.hpp; sourceTree = "<group>"; };
 		FF972EF61E5B8657002646B8 /* Array.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Array.hpp; path = Model/Array.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,7 +84,7 @@
 		B85F54EC1E48D5F000E3DE61 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B8161F4F1E672E59000A44C0 /* Stack.hpp */,
+				B8F450E81E69C8C1007219B0 /* Implements Doubly Linked */,
 				B8161F4E1E672849000A44C0 /* DoublyLinkedList.hpp */,
 				B8DD917A1E648CFB00939DA5 /* BiDirectionalNode.hpp */,
 				B87FC1AB1E5CA375001A02F9 /* List.h */,
@@ -103,6 +106,17 @@
 				B877F4901E4B7D39003CF139 /* Runner.cpp */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		B8F450E81E69C8C1007219B0 /* Implements Doubly Linked */ = {
+			isa = PBXGroup;
+			children = (
+				B8161F4F1E672E59000A44C0 /* Stack.hpp */,
+				B8F450E91E69C908007219B0 /* DoubleList.hpp */,
+				B8F450EA1E69C92B007219B0 /* CircularList.hpp */,
+				B8F450EB1E69C93C007219B0 /* Queue.hpp */,
+			);
+			name = "Implements Doubly Linked";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -16,9 +16,16 @@ class Stack : public DoublyLinkedList<Type>
 private:
 public:
     Stack();
+    ~Stack();
     void add(Type value);
+    Type remove(int index);
+    Type pop();
+    Type peek();
+    void push(Type data);
     
 };
+
+
 /**
  The add method on a stack only adds to the end
  never at an index.

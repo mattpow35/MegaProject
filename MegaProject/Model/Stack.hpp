@@ -27,13 +27,39 @@ public:
 
 
 /**
- The add method on a stack only adds to the end
- never at an index.
+ The add method on a stack only adds to the end, never at an index.
  */
 template <class Type>
-void Stack<Type> :: add(Type value) : DoublyLinkedList<Type> :: add(value)
+void Stack<Type> :: add(Type valueToAdd)
 {
+    push(value);
+}
+
+
+/*
+ Adds a new supplied value to the end of the stack.
+ set new object to point to end.
+ Increases the size by 1.
+ Adjusts the end pointer to relfect the new end of the stack.
+ */
+template <class Type>
+void Stack<Type> :: push(Type valueToAdd)
+{
+    BiDirectionalNode<Type> * addToStack = new BiDirectionalNode(valueToAdd);
     
+    if(this->size == 0)
+    {
+        this->front = addToStack;
+        
+    }
+    else
+    {
+        this->end->setNextPointer(addToStack);
+        addToStack->setPreviousPointer(this->end);
+       
+    }
+    this->end = addToStack;
+    this->size++;
 }
 
 #endif /* Stack_h */

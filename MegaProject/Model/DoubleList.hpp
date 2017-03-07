@@ -14,7 +14,24 @@
 tempplate <class Type>
 class DoubleList : public DoublyLinkedList<Type>
 {
-    
+private:
+public:
+    DoubleList();
+    ~DoubleList();
+    void add(Type data);
+    Type remove(int index);
+    void addAtIndexFast(int index, Type value);
+    void addAtIndex(int index, Type value);
+    Type getFromIndex(int index);
+    Type getFromIndexFast(int index);
 };
+
+
+
+template <class Type>
+Type DoubleList<Type> :: getFromIndex(int index)
+{
+    
+}
 
 #endif /* DoubleList_h */

@@ -54,12 +54,12 @@ void Stack<Type> :: push(Type valueToAdd)
     }
     else
     {
-        this->end->setNextPointer(addToStack);
-        addToStack->setPreviousPointer(this->end);
+        this->getEnd()->setNextPointer(addToStack);
+        addToStack->setPreviousPointer(this->getEnd());
        
     }
-    this->end = addToStack;
-    this->size++;
+    this->setEnd(addToStack);
+    this->setSize(this->getSize() + 1);
 }
 
 #endif /* Stack_h */

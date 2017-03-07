@@ -26,10 +26,65 @@ public:
     
 };
 
+template <class Type>
+Queue<Type> :: Queue() : DoublyLinkedList<Type>()
+{
+    
+}
+//same as all other data structure destructors.
+template <class Type>
+Queue<Type> :: ~Queue()
+{
+    BiDirectionalNode<Type> * remove = this->getFront();
+    while(this->getFront() != nullptr)
+    {
+        this->setFront(this->getFront()->getNextPointer());
+        delete remove;
+        remove = this->getFront();
+    }
+}
 
+/*
+ Call the enqueue method.
+ Method implemented to ensure the child class is NOT abstract.
+ */
 
+template <class Type>
+void Queue<Type> :: add(Type value)
+{
+    enqueue(value);
+}
+/*
+ 1. Create node
+ 2. If size == 0, adjust fornt to point to new node
+ 3. else, add new node to ends next
+ 4. move end to new node
+ 5. adjust size.
+ */
+template <class Type>
+void Queue<Type> :: enqueue(Type insertedValue)
+{
+    BiDirectionalNode<Type>* added = new BiDirectionalNode<Type>(insertedValue);
+    
+    if(this->getSize() == 0 || this->getFront() == nullptr || this->getEnd() == nullptr)
+    {
+        this->setFront(added);
+    }
+    else
+    {
+        this->getEnd()->setNextPointer(added);
+        added->setPreviousPointer(this->getEnd());
+    }
+    this->setEnd(added);
+    this->setSize(this->getSize() + 1);
+}
 
-
+/*
+ Remove from Queue
+ check valid index and size
+ call dequeue
+ Implemented to avoid abstract status.
+ */
 template <class Type>
 Type Queue<Type> :: remove(int index)
 {

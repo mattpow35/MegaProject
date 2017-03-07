@@ -24,8 +24,17 @@ public:
     void push(Type data);
     
 };
+template <class Type>
+Stack<Type> :: Stack() : DoublyLinkedList<Type>()
+{
+    
+}
 
-
+template <class Type>
+Stack<Type> :: ~Stack()
+{
+    
+}
 /**
  The add method on a stack only adds to the end, never at an index.
  */
@@ -37,10 +46,11 @@ void Stack<Type> :: add(Type valueToAdd)
 
 
 /*
- Adds a new supplied value to the end of the stack.
- set new object to point to end.
- Increases the size by 1.
- Adjusts the end pointer to relfect the new end of the stack.
+ 1. creates a new node
+ 2. if the stack is empty sets front to the new node
+ 3. else setss the end's next to point to the new node and the new nodes previous to end.
+ 4. move end to the new node.
+ 5. increases the size by 1.
  */
 template <class Type>
 void Stack<Type> :: push(Type valueToAdd)

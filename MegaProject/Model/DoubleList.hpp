@@ -34,7 +34,6 @@ Type DoubleList<Type> :: getFromIndex(int index)
     
 }
 
-<<<<<<< HEAD
 template <class Type>
 void DoubleList<Type> :: add(Type value)
 {

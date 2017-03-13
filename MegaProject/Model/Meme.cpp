@@ -34,6 +34,11 @@ int Meme :: getDankness()
     return dankness;
 }
 
+double Meme :: getHipsterQuotient()
+{
+    return hipsterQuotient;
+}
+
 bool Meme :: isMainstream()
 {
     return mainstream;

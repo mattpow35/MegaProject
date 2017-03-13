@@ -25,6 +25,7 @@ public:
     Type peek();
     
 };
+
 template <class Type>
 Queue<Type> :: Queue() : DoublyLinkedList<Type>()
 {
@@ -42,10 +43,12 @@ Queue<Type> :: ~Queue()
         remove = this->getFront();
     }
 }
+
 /*
  Call the enqueue method.
  Method implemented to ensure the child class is NOT abstract.
  */
+
 template <class Type>
 void Queue<Type> :: add(Type value)
 {
@@ -75,6 +78,7 @@ void Queue<Type> :: enqueue(Type insertedValue)
     this->setEnd(added);
     this->setSize(this->getSize() + 1);
 }
+
 /*
  Remove from Queue
  check valid index and size
@@ -87,6 +91,7 @@ Type Queue<Type> :: remove(int index)
     assert(index == 0 && this->getSize() > 0);
     return dequeue();
 }
+
 /*
  1. assert size is valid
  2. get data from front node
@@ -97,6 +102,7 @@ Type Queue<Type> :: remove(int index)
  6. adjsut size down by 1
  7. return old value.
  */
+
 template <class Type>
 Type Queue<Type> :: dequeue()
 {
@@ -132,4 +138,5 @@ Type Queue<Type> :: peek()
     
     return this->getFront()->getNodeData();
 }
+
 #endif /* Queue_h */

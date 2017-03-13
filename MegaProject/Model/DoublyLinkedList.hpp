@@ -71,19 +71,19 @@ BiDirectionalNode<Type> * DoublyLinkedList<Type> :: getEnd() const
 template <class Type>
 void DoublyLinkedList<Type> :: setSize(int size)
 {
-        this->size = size;
+    this->size = size;
 }
 
 template <class Type>
 void DoublyLinkedList<Type> :: setFront(BiDirectionalNode<Type> * front)
 {
-        this->front = front;
+    this->front = front;
 }
 
 template <class Type>
 void DoublyLinkedList<Type> :: setEnd(BiDirectionalNode<Type> * end)
 {
-        this->end = end;
+    this->end = end;
 }
 
 

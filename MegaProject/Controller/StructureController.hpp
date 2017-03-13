@@ -11,6 +11,8 @@
 
 #include "../Model/Node.hpp"
 #include "Array.hpp"
+#include "../Model/Queue.hpp"
+#include "../Model/Meme.hpp"
 #include <string>
 #include "List.h"
 
@@ -28,7 +30,11 @@ private:
     void testNodeTypes();
     void testArrayTemplate();
     void testAdvancedFeatures();
-    void testList();
+    void testListIntro();
+    void testDoubleLists();
+    void testListTiming();
+    void testMemeQueue();
+    void testNumberStack();
 public:
     StructureController();
     void start();

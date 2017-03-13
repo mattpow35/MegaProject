@@ -12,6 +12,7 @@
 #include "Array.hpp"
 #include "List.h"
 
+
 using namespace std;
 
 StructureController :: StructureController()
@@ -76,7 +77,7 @@ void StructureController:: testAdvancedFeatures()
     copiedWords.setAtIndex(3, "Changed the contents of the copied Array");
 }
 
-void StructureController :: testList()
+void StructureController :: testListIntro()
 {
     List<int> sample;
     sample.addFront(2);
@@ -104,6 +105,28 @@ void StructureController :: testList()
     
 }
 
+void StructureController :: testMemeQueue()
+{
+    Meme firstMeme("salt guy");
+    Queue<Meme> memeQueue;
+    memeQueue.add(firstMeme);
+    Meme secondMeme;
+    secondMeme.setDankness(8435);
+    memeQueue.enqueue(secondMeme);
+    Meme thirdMeme("white guy blinking");
+    thirdMeme.setDankness(10000);
+    memeQueue.enqueue(thirdMeme);
+    
+    Meme temp = memeQueue.dequeue();
+    cout << "Meme title should be salt guy and is: " << temp.getTitle() << endl;
+    
+    Meme secondTemp = memeQueue.dequeue();
+    cout << "this second memes dankness should be 8435 and is: " << secondTemp.getDankness() << endl;
+    
+    Meme thirdTemp = memeQueue.peek();
+    cout << "The third memes title should be white guy blinking with a dankness of 10000. Title: " << thirdTemp.getTitle() << " dankness: " << thirdTemp.getDankness() << endl;
+}
+
 void StructureController :: start()
 {
 //    cout << "Going to test the IntNodeArray" << endl;
@@ -117,6 +140,6 @@ void StructureController :: start()
 //    cout << "testing advanced features." << endl;
 //    testAdvancedFeatures();
 //    cout << "done testing advanced features." << endl;
-    
-    testList();
+    testMemeQueue();
+
 }

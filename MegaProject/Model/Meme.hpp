@@ -26,7 +26,7 @@ public:
     Meme(string title);
     int getDankness();
     double getHipsterQuotient();
-    bool isMainstream();
+    bool getIsMainstream();
     string getTitle();
     void setTitle(string title);
     void setDankness(int dank);

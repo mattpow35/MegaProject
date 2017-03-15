@@ -39,7 +39,7 @@ double Meme :: getHipsterQuotient()
     return hipsterQuotient;
 }
 
-bool Meme :: isMainstream()
+bool Meme :: getIsMainstream()
 {
     return mainstream;
 }

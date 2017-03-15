@@ -15,6 +15,7 @@ template <class Type>
 class CircularList : public DoublyLinkedList<Type>
 {
 private:
+    BiDirectionalNode<Type> * findNode(int index);
 public:
     CircularList();
     ~CircularList();
@@ -22,6 +23,7 @@ public:
     Type remove(int index);
     Type getFromIndex(int index);
     Type setAtIndex(int index, Type data);
+    
 };
 
 template <class Type>
@@ -40,6 +42,29 @@ CircularList<Type> :: ~CircularList()
         delete remove;
         remove = this->getFront();
     }
+}
+
+template <class Type>
+BiDirectionalNode<Type> * CircularList<Type> :: findNode(int index)
+{
+    BiDirectionalNode<Type> * nodeToFind;
+    if(index < this->getSize() / 2)
+    {
+        nodeToFind = this->getFront();
+        for(int spot = 0; spot < index; spot++)
+        {
+            nodeToFind = nodeToFind->getNextPointer();
+        }
+    }
+    else
+    {
+        nodeToFind = this->getEnd();
+        for(int spot = this->getSize() -1; spot > index; spot --)
+        {
+            nodeToFind = nodeToFind->getPreviousPointer();
+        }
+    }
+    return nodeToFind;
 }
 
 template <class Type>
@@ -64,4 +89,72 @@ void CircularList<Type> :: add(Type data)
     }
     this->setSize(this->getSize() + 1);
 }
+
+template <class Type>
+Type CircularList<Type> :: remove(int index)
+{
+    assert(index >= 0 && index < this->getSize());
+    
+    Type removedValue;
+    
+    BiDirectionalNode<Type> * removed = findNode(index);
+    
+        
+    removedValue = removed->getNodeData();
+        
+    BiDirectionalNode<Type> * oldPrevious = removed->getPreviousPointer();
+    BiDirectionalNode<Type> * oldNext = removed->getNextPointer();
+    
+    if(this->getSize() > 1)
+    {
+        oldPrevious->setNextPointer(oldNext);
+        oldNext->setPreviousPointer(oldPrevious);
+    }
+    else
+    {
+        this->setFront(nullptr);
+        this->setEnd(nullptr);
+    }
+    delete removed;
+    this->setSize(this->getSize()-1);
+    
+    return removedValue;
+}
+
+template <class Type>
+Type CircularList<Type> :: getFromIndex(int index)
+{
+    assert(index >= 0 && index < this->getSize());
+    Type retrieved;
+    
+    BiDirectionalNode<Type> * current = findNode(index);
+    
+    retrieved = current->getNodeData();
+    
+    return retrieved;
+}
+
+template <class Type>
+Type CircularList<Type> :: setAtIndex(int index, Type data)
+{
+    assert(index >= 0 && index < this->getSize());
+    
+    Type replacedl
+    
+    BiDirectionalNode<Type> * current = findNode(index);
+    
+    replaced = current->getNodeData();
+    current->setNodeData(data);
+    
+    return replaced;
+}
+
+
+
+
+
+
+
+
+
 #endif /* CircularList_h */

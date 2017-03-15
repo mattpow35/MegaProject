@@ -26,8 +26,23 @@ public:
     Type getFromIndexFast(int index);
 };
 
+template <class Type>
+DoubleList<Type> :: DoubleList() : DoublyLinkedList<Type>()
+{
+    
+}
 
-
+template <class Type>
+DoubleList<Type> :: ~DoubleList()
+{
+    BiDirectionalNode<Type> * remove = this->getFront();
+    while(this->getFront() != nullptr)
+    {
+        this->setFront(this->getFront()->getNextPointer());
+        delete remove;
+        remove = this->getFront();
+    }
+}
 template <class Type>
 Type DoubleList<Type> :: getFromIndex(int index)
 {

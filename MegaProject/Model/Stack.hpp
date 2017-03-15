@@ -31,6 +31,18 @@ Stack<Type> :: Stack() : DoublyLinkedList<Type>()
 }
 
 template <class Type>
+Stack<Type> :: ~Type()
+{
+    BiDirectionalNode<Type> * remove = this->getFront();
+    while(this->getFront() != nullptr)
+    {
+        this->setFront(this->getFront()->getNextPointer());
+        delete remove;
+        remove = this->getFront();
+    }
+}
+
+template <class Type>
 Stack<Type> :: ~Stack()
 {
     BiDirectionalNode<Type> * remove = this->getFront();

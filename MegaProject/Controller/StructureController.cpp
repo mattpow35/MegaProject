@@ -110,21 +110,26 @@ void StructureController :: testMemeQueue()
     Meme firstMeme("salt guy");
     Queue<Meme> memeQueue;
     memeQueue.add(firstMeme);
+    cout << "Added first meme, size should be 1 and is: " << memeQueue.getSize() << endl;
     Meme secondMeme;
     secondMeme.setDankness(8435);
     memeQueue.enqueue(secondMeme);
     Meme thirdMeme("white guy blinking");
     thirdMeme.setDankness(10000);
     memeQueue.enqueue(thirdMeme);
+    cout << "added second and third meme, size should be 3 and is: " << memeQueue.getSize() << endl;
+    
     
     Meme temp = memeQueue.dequeue();
-    cout << "Meme title should be salt guy and is: " << temp.getTitle() << endl;
+    cout << "Removed first meme, size should now be 2 and is: " << memeQueue.getSize() << " Meme title should be salt guy and is: " << temp.getTitle() << endl;
     
-    Meme secondTemp = memeQueue.dequeue();
-    cout << "this second memes dankness should be 8435 and is: " << secondTemp.getDankness() << endl;
+    
+    Meme secondTemp = memeQueue.remove(0);
+    cout << "this next meme is removed and its dankness should be 8435 and is: " << secondTemp.getDankness() << endl;
     
     Meme thirdTemp = memeQueue.peek();
-    cout << "The third memes title should be white guy blinking with a dankness of 10000. Title: " << thirdTemp.getTitle() << " dankness: " << thirdTemp.getDankness() << endl;
+    cout << "The last memes title should be white guy blinking with a dankness of 10000. Title: " << thirdTemp.getTitle() << " dankness: " << thirdTemp.getDankness() << endl;
+    cout << "list size should now be 1 and is: " << memeQueue.getSize() << endl;
 }
 
 void StructureController :: start()

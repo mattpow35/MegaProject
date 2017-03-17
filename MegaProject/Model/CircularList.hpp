@@ -23,7 +23,7 @@ public:
     Type remove(int index);
     Type getFromIndex(int index);
     Type setAtIndex(int index, Type data);
-    
+    BiDirectionalNode<Type> * findNode(int index);
 };
 
 template <class Type>

@@ -74,6 +74,7 @@ int List<Type> :: getSize() const
 {
     return this->size;
 }
+
     
 template <class Type>
 void List<Type> :: addFront(Type value)
@@ -220,7 +221,7 @@ Type List<Type> :: setAtIndex(int index, Type data)
     
     for(int spot = 0; spot < index; spot++)
     {
-        current = current->getNodePointer;
+        current = current->getNextPointer();
     }
     
     removedData = current->getNodeData();
@@ -246,6 +247,38 @@ Type List<Type> :: getFromIndex(int index)
     return information;
 }
 
+template <class Type>
+Node<Type> * List<Type> :: getFront() const
+{
+    return front;
+}
 
+template <class Type>
+Node<Type> * List<Type> :: getEnd() const
+{
+    return end;
+}
+
+template <class Type>
+bool List<Type> :: contains(Type data)
+{
+    bool containsData = false;
+    Node<Type> * current = front;
+    for(int position = 0; position < size; position ++)
+    {
+        if(current->getNodeData() == data)
+        {
+            containsData = true;
+            return containsData;
+        }
+        else
+        {
+            current = current->getNextPointer();
+        }
+            
+    }
+   
+    return containsData;
+}
 
 #endif /* List_h */

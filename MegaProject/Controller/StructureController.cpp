@@ -77,7 +77,7 @@ void StructureController:: testAdvancedFeatures()
     copiedWords.setAtIndex(3, "Changed the contents of the copied Array");
 }
 
-void StructureController :: testListIntro()
+void StructureController :: testList()
 {
     List<int> sample;
     sample.addFront(2);
@@ -100,8 +100,29 @@ void StructureController :: testListIntro()
     {
         cout << sample.getFromIndex(index) << endl;
     }
+    sample.addAtIndex(1,2);
+    cout << "list should now be 1 2 3" << endl;
+    for (int index = 0; index < sample.getSize(); index ++ )
+    {
+        cout << sample.getFromIndex(index) << endl;
+    }
+    sample.setAtIndex(1,4);
+    cout <<  "set second spot to 4, list should now be 1 4 3" << endl;
+    for (int index = 0; index < sample.getSize(); index ++ )
+    {
+        cout << sample.getFromIndex(index) << endl;
+    }
     
-    
+    if (sample.contains(3))
+    {
+        cout << "the list contains the number 3" << endl;
+    }
+    else
+    {
+        cout << "the list does not contain the number 3" << endl;
+    }
+    cout << "the front should be 1 and is: " << sample.getFront()->getNodeData() << endl;
+    cout << "the end should be 3 and is: " << sample.getEnd()->getNodeData() << endl;
     
 }
 
@@ -132,6 +153,7 @@ void StructureController :: testMemeQueue()
     cout << "list size should now be 1 and is: " << memeQueue.getSize() << endl;
 }
 
+
 void StructureController :: start()
 {
 //    cout << "Going to test the IntNodeArray" << endl;
@@ -145,6 +167,7 @@ void StructureController :: start()
 //    cout << "testing advanced features." << endl;
 //    testAdvancedFeatures();
 //    cout << "done testing advanced features." << endl;
-    testMemeQueue();
+//    testMemeQueue();
+    testList();
 
 }

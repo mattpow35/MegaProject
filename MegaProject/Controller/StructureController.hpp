@@ -30,7 +30,7 @@ private:
     void testNodeTypes();
     void testArrayTemplate();
     void testAdvancedFeatures();
-    void testListIntro();
+    void testList();
     void testDoubleLists();
     void testListTiming();
     void testMemeQueue();

@@ -34,7 +34,7 @@ private:
     void testArrayTemplate();
     void testAdvancedFeatures();
     void testList();
-    void testDoubleLists();
+    void testDoubleList();
     void testMemeQueue();
     void testNumberStack();
     void testDoubleListTiming();

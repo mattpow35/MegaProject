@@ -152,7 +152,26 @@ void StructureController :: testMemeQueue()
     cout << "list size should now be 1 and is: " << memeQueue.getSize() << endl;
 }
 
-
+void StructureController :: testDoubleList()
+{
+    DoubleList<int> tempList;
+    
+    tempList.add(3);
+    tempList.add(4);
+    tempList.add(5);
+    
+    cout << "added 3 items to the list, size should be 3 and is " << tempList.getSize() << endl;
+    cout << "list should read: 3 4 5 " << endl;
+    for (int index = 0; index < tempList.getSize(); index ++ )
+    {
+        cout << tempList.getFromIndex(index) << endl;
+    }
+    cout << "removing the second item from the list: number should be 4 and is " << tempList.remove(1) << endl;
+    
+    
+    
+    
+}
 void StructureController :: testDoubleListTiming()
 {
     DoubleList<int> timingList;
@@ -230,7 +249,8 @@ void StructureController :: start()
 //    cout << "done testing advanced features." << endl;
     //testMemeQueue();
     //testList();
+    testDoubleList();
    // testDoubleListTiming();
-    testNumberStack();
+    //testNumberStack();
 
 }

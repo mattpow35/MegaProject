@@ -11,7 +11,7 @@
 
 #include "DoublyLinkedList.hpp"
 
-tempplate <class Type>
+template <class Type>
 class DoubleList : public DoublyLinkedList<Type>
 {
 private:

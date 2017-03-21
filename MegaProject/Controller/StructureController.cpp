@@ -154,7 +154,7 @@ void StructureController :: testMemeQueue()
 }
 
 
-void StructureController :: testListTiming()
+void StructureController :: testDoubleListTiming()
 {
     DoubleList<int> timingList;
     
@@ -211,6 +211,6 @@ void StructureController :: start()
 //    cout << "done testing advanced features." << endl;
     //testMemeQueue();
     //testList();
-    testListTiming();
+    testDoubleListTiming();
 
 }

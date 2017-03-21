@@ -36,7 +36,7 @@ private:
     void testDoubleLists();
     void testMemeQueue();
     void testNumberStack();
-    void testListTiming();
+    void testDoubleListTiming();
 public:
     StructureController();
     void start();

@@ -96,7 +96,7 @@ void DoubleList<Type> :: add(Type value)
     else
     {
         this->getEnd()->setNextPointer(addedNode);
-        addNode->setPreviousPointer(this->getEnd());
+        addedNode->setPreviousPointer(this->getEnd());
     }
     this->setEnd(addedNode);
     this->setSize(this->getSize() + 1);
@@ -114,14 +114,14 @@ Type DoubleList<Type> :: remove(int index)
     derp = nodeToTakeOut->getNodeData();
     
     BiDirectionalNode<Type> * prev = nodeToTakeOut->getPreviousPointer();
-    BiDirectionalNode<Type> * prev = nodeToTakeOut->getNextPointer();
+    BiDirectionalNode<Type> * next = nodeToTakeOut->getNextPointer();
     
     prev->setNextPointer(next);
-    next->setPreviousPointer(previous);
+    next->setPreviousPointer(prev);
     
     delete nodeToTakeOut;
     
-    this->setSize(this-getSize() - 1);
+    this->setSize(this->getSize() - 1);
     return derp;
 }
 

@@ -15,6 +15,8 @@
 #include "../Model/Meme.hpp"
 #include <string>
 #include "List.h"
+#include "Timer.hpp"
+#include "DoubleList.hpp"
 
 using namespace std;
 
@@ -32,9 +34,9 @@ private:
     void testAdvancedFeatures();
     void testList();
     void testDoubleLists();
-    void testListTiming();
     void testMemeQueue();
     void testNumberStack();
+    void testListTiming();
 public:
     StructureController();
     void start();

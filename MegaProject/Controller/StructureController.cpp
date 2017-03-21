@@ -154,6 +154,48 @@ void StructureController :: testMemeQueue()
 }
 
 
+void StructureController :: testListTiming()
+{
+    DoubleList<int> timingList;
+    
+    for(int index = 0; index < 10000; index++)
+    {
+        timingList.add(rand());
+    }
+    cout << "added 10000 items to the list, size should be 10000 and is: " << timingList.getSize() << endl;
+    
+    long slowTime [1000];
+    long fastTime [1000];
+    double averageSlow = 0.00, averageFast = 0.00;
+    Timer doubleTimer;
+    
+    for(int index = 0; index < 1000; index++)
+    {
+        int randomIndex = rand() % 10000;
+        doubleTimer.startTimer();
+        timingList.getFromIndex(randomIndex);
+        doubleTimer.stopTimer();
+        slowTime[index] = doubleTimer.getExecutionTimeInMicroseconds();
+        doubleTimer.resetTimer();
+        
+        doubleTimer.startTimer();
+        timingList.getFromIndexFast(randomIndex);
+        doubleTimer.stopTimer();
+        fastTime[index] = doubleTimer.getExecutionTimeInMicroseconds();
+        doubleTimer.resetTimer();
+        
+        averageSlow += slowTime[index];
+        averageFast += fastTime[index];
+    }
+    
+    averageSlow = averageSlow/1000;
+    averageFast = averageFast/1000;
+    
+    cout << "The average speed for the getFromIndex method was: " << averageSlow << " microseconds." << endl;
+    cout << "The average speed for the getFromIndexFast method was: " << averageFast << " microseconds." << endl;
+    cout << "A time savings?? of: " << averageSlow - averageFast << " microseconds." << endl;
+}
+
 void StructureController :: start()
 {
 //    cout << "Going to test the IntNodeArray" << endl;
@@ -167,7 +209,8 @@ void StructureController :: start()
 //    cout << "testing advanced features." << endl;
 //    testAdvancedFeatures();
 //    cout << "done testing advanced features." << endl;
-//    testMemeQueue();
-    testList();
+    //testMemeQueue();
+    //testList();
+    testListTiming();
 
 }

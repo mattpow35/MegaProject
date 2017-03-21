@@ -17,6 +17,7 @@
 #include "List.h"
 #include "Timer.hpp"
 #include "DoubleList.hpp"
+#include "Stack.hpp"
 
 using namespace std;
 

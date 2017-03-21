@@ -30,17 +30,6 @@ Stack<Type> :: Stack() : DoublyLinkedList<Type>()
     
 }
 
-template <class Type>
-Stack<Type> :: ~Type()
-{
-    BiDirectionalNode<Type> * remove = this->getFront();
-    while(this->getFront() != nullptr)
-    {
-        this->setFront(this->getFront()->getNextPointer());
-        delete remove;
-        remove = this->getFront();
-    }
-}
 
 template <class Type>
 Stack<Type> :: ~Stack()
@@ -59,7 +48,7 @@ Stack<Type> :: ~Stack()
 template <class Type>
 void Stack<Type> :: add(Type valueToAdd)
 {
-    push(value);
+    push(valueToAdd);
 }
 
 
@@ -73,9 +62,9 @@ void Stack<Type> :: add(Type valueToAdd)
 template <class Type>
 void Stack<Type> :: push(Type valueToAdd)
 {
-    BiDirectionalNode<Type> * addToStack = new BiDirectionalNode(valueToAdd);
+    BiDirectionalNode<Type> * addToStack = new BiDirectionalNode<Type>(valueToAdd);
     
-    if(this->size == 0)
+    if(this->getSize() == 0)
     {
         this->setFront(addToStack);
         
@@ -104,7 +93,7 @@ template <class Type>
 Type Stack<Type> :: peek()
 {
     assert(this->getSize() > 0);
-    return this->end->getNodeData();
+    return this->getEnd()->getNodeData();
 }
 /*
  1. assert size > 0.

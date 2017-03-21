@@ -9,8 +9,7 @@
 #include "StructureController.hpp"
 #include <iostream>
 #include "IntNodeArray.hpp"
-#include "Array.hpp"
-#include "List.h"
+
 
 
 using namespace std;
@@ -196,6 +195,26 @@ void StructureController :: testDoubleListTiming()
     cout << "A time savings?? of: " << averageSlow - averageFast << " microseconds." << endl;
 }
 
+void StructureController :: testNumberStack()
+{
+    Stack<int> numberStack;
+    
+    numberStack.push(3);
+    numberStack.add(6);
+    numberStack.add(9);
+    numberStack.add(10);
+    numberStack.add(4);
+    
+    cout << "added 5 items to  stack, size should be 5 and is: " << numberStack.getSize() << endl;
+    cout << "The top number on the stack should be 4 and is: " << numberStack.peek() << endl;
+    numberStack.pop();
+    cout << "took out first item size should now be 4 and is: " << numberStack.getSize() << endl;
+    cout << "removing the next number in the stack, size should be 3 and number should be 10. " << "number is " << numberStack.remove(3) << " size is " << numberStack.getSize() << endl;
+    cout << "adding the number 1 to the stack "<<  endl;
+    numberStack.push(1);
+    cout << "size should now be 4 and is " << numberStack.getSize() << " top number should be 1 and is " << numberStack.peek() << endl;
+}
+
 void StructureController :: start()
 {
 //    cout << "Going to test the IntNodeArray" << endl;
@@ -211,6 +230,7 @@ void StructureController :: start()
 //    cout << "done testing advanced features." << endl;
     //testMemeQueue();
     //testList();
-    testDoubleListTiming();
+   // testDoubleListTiming();
+    testNumberStack();
 
 }

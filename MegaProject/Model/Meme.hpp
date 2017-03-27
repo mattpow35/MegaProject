@@ -20,17 +20,23 @@ private:
     string title;
     int dankness;
     double hipsterQuotient;
-    bool isMainstream;
+    bool mainstream;
 public:
     Meme();
     Meme(string title);
     int getDankness();
     double getHipsterQuotient();
-    bool getIsMainstream();
+    bool isMainstream();
     string getTitle();
     void setTitle(string title);
     void setDankness(int dank);
     void setHipsterQuotient(double hipsterQuotient);
     void setMainstream(bool isMainstream);
+    
+    //operator over load methods.
+    //overloading the comparison operators to sort memes by dankness.
+    bool operator < (Meme& compared);
+    bool operator > (Meme& compared);
+    bool operator == (Meme& compared);
 };
 #endif /* Meme_hpp */

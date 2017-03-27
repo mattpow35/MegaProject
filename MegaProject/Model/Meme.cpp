@@ -77,3 +77,39 @@ bool Meme :: operator < (Meme& comparedMeme)
     
     return false;
 }
+
+bool Meme :: operator > (Meme& comparedMeme)
+{
+    if(this->isMainstream() && comparedMeme.isMainstream())
+    {
+        if (this->getDankness() > comparedMeme.getDankness())
+        {
+            return true;
+        }
+        return false;
+    }
+    return false;
+}
+
+bool Meme :: operator == (Meme& comparedMeme)
+{
+    if(this->isMainstream() && comparedMeme.isMainstream())
+    {
+        if(this->getDankness() == comparedMeme.getDankness())
+        {
+            return true;
+        }
+        return false;
+    }
+    
+    return false;
+}
+
+
+
+
+
+
+
+
+

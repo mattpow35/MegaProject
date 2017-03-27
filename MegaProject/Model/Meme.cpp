@@ -13,7 +13,7 @@ Meme :: Meme()
     this->title = "Booooring";
     this->dankness = 0;
     this->hipsterQuotient = -.9999;
-    this->mainstream = true;
+    this->isMainstream = true;
 }
 
 Meme :: Meme(string title)
@@ -21,7 +21,7 @@ Meme :: Meme(string title)
     this->title = title;
     this->dankness = title.length();
     this->hipsterQuotient = 3.14;
-    this->mainstream = true;
+    this->isMainstream = true;
 }
 
 string Meme :: getTitle()
@@ -41,7 +41,7 @@ double Meme :: getHipsterQuotient()
 
 bool Meme :: getIsMainstream()
 {
-    return mainstream;
+    return isMainstream;
 }
 
 void Meme :: setDankness(int dank)
@@ -61,5 +61,5 @@ void Meme :: setHipsterQuotient(double quotient)
 
 void Meme :: setMainstream(bool isMain)
 {
-    this->mainstream = isMain;
+    this->isMainstream = isMain;
 }

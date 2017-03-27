@@ -20,7 +20,7 @@ private:
     string title;
     int dankness;
     double hipsterQuotient;
-    bool mainstream;
+    bool isMainstream;
 public:
     Meme();
     Meme(string title);
@@ -31,6 +31,6 @@ public:
     void setTitle(string title);
     void setDankness(int dank);
     void setHipsterQuotient(double hipsterQuotient);
-    void setMainstream(bool mainstream);
+    void setMainstream(bool isMainstream);
 };
 #endif /* Meme_hpp */

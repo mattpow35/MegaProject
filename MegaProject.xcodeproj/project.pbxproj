@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B84C04D71E8BF05F0036206E /* FileController.c in Sources */ = {isa = PBXBuildFile; fileRef = B84C04D51E8BF05F0036206E /* FileController.c */; };
 		B84C04DA1E8BF4490036206E /* CrimeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B84C04D81E8BF4490036206E /* CrimeData.cpp */; };
+		B84C04DD1E8BF95E0036206E /* FileController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B84C04DB1E8BF95E0036206E /* FileController.cpp */; };
 		B85F54EB1E48D5E800E3DE61 /* IntNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B85F54E91E48D5E800E3DE61 /* IntNode.cpp */; };
 		B877F48F1E4B7260003CF139 /* IntNodeArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B877F48D1E4B7260003CF139 /* IntNodeArray.cpp */; };
 		B877F4911E4B7D39003CF139 /* Runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B877F4901E4B7D39003CF139 /* Runner.cpp */; };
@@ -32,10 +32,10 @@
 /* Begin PBXFileReference section */
 		B8161F4E1E672849000A44C0 /* DoublyLinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DoublyLinkedList.hpp; path = Model/DoublyLinkedList.hpp; sourceTree = "<group>"; };
 		B8161F4F1E672E59000A44C0 /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Stack.hpp; path = Model/Stack.hpp; sourceTree = "<group>"; };
-		B84C04D51E8BF05F0036206E /* FileController.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = FileController.c; path = Controller/FileController.c; sourceTree = "<group>"; };
-		B84C04D61E8BF05F0036206E /* FileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileController.h; path = Controller/FileController.h; sourceTree = "<group>"; };
 		B84C04D81E8BF4490036206E /* CrimeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CrimeData.cpp; path = Model/CrimeData.cpp; sourceTree = "<group>"; };
 		B84C04D91E8BF4490036206E /* CrimeData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CrimeData.hpp; path = Model/CrimeData.hpp; sourceTree = "<group>"; };
+		B84C04DB1E8BF95E0036206E /* FileController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileController.cpp; path = Controller/FileController.cpp; sourceTree = "<group>"; };
+		B84C04DC1E8BF95E0036206E /* FileController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FileController.hpp; path = Controller/FileController.hpp; sourceTree = "<group>"; };
 		B85F54DF1E48D40B00E3DE61 /* MegaProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MegaProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85F54E91E48D5E800E3DE61 /* IntNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNode.cpp; path = Model/IntNode.cpp; sourceTree = "<group>"; };
 		B85F54EA1E48D5E800E3DE61 /* IntNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNode.hpp; path = Model/IntNode.hpp; sourceTree = "<group>"; };
@@ -122,8 +122,8 @@
 				B877F4941E4B7D9B003CF139 /* StructureController.hpp */,
 				B877F4931E4B7D9B003CF139 /* StructureController.cpp */,
 				B877F4901E4B7D39003CF139 /* Runner.cpp */,
-				B84C04D51E8BF05F0036206E /* FileController.c */,
-				B84C04D61E8BF05F0036206E /* FileController.h */,
+				B84C04DB1E8BF95E0036206E /* FileController.cpp */,
+				B84C04DC1E8BF95E0036206E /* FileController.hpp */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -201,9 +201,9 @@
 				B877F4951E4B7D9B003CF139 /* StructureController.cpp in Sources */,
 				B85F54EB1E48D5E800E3DE61 /* IntNode.cpp in Sources */,
 				B877F48F1E4B7260003CF139 /* IntNodeArray.cpp in Sources */,
-				B84C04D71E8BF05F0036206E /* FileController.c in Sources */,
 				FF5B7A681E89C11A003DA3AD /* Timer.cpp in Sources */,
 				B878191B1E76DF5D002DCB4F /* Meme.cpp in Sources */,
+				B84C04DD1E8BF95E0036206E /* FileController.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

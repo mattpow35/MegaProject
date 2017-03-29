@@ -1,16 +1,16 @@
 //
-//  FileController.h
+//  FileController.hpp
 //  MegaProject
 //
 //  Created by Powley, Matthew on 3/29/17.
 //  Copyright © 2017 Powley, Matthew. All rights reserved.
 //
 
-#ifndef FileController_h
-#define FileController_h
+#ifndef FileController_hpp
+#define FileController_hpp
 
-#include "../Model/DoubleList.hpp"
-#include "../Model/Meme.hpp"
+#include "DoubleList.hpp"
+#include "Meme.hpp"
 //#include "../Model/CrimeData.hpp"
 #include <string> // String Type
 #include <fstream> //File operations
@@ -29,4 +29,4 @@ public:
     
 };
 
-#endif /* FileController_h */
+#endif /* FileController_hpp */

@@ -10,6 +10,8 @@
 #define CrimeData_hpp
 
 #include <string>
+#include <cmath>
+
 using namespace std;
 
 class CrimeData

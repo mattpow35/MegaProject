@@ -98,16 +98,9 @@
 		B85F54EC1E48D5F000E3DE61 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B8F450E81E69C8C1007219B0 /* Implements Doubly Linked */,
-				B8161F4E1E672849000A44C0 /* DoublyLinkedList.hpp */,
-				B87FC1AB1E5CA375001A02F9 /* List.h */,
-				FF972EF61E5B8657002646B8 /* Array.hpp */,
-				B877F48E1E4B7260003CF139 /* IntNodeArray.hpp */,
-				B85F54E91E48D5E800E3DE61 /* IntNode.cpp */,
+				B872177E1E9D286D0039CF19 /* Linear Data Structure */,
 				B872177D1E9D267F0039CF19 /* Trees */,
 				B872177B1E9D263C0039CF19 /* Items to Stor */,
-				B85F54EA1E48D5E800E3DE61 /* IntNode.hpp */,
-				B877F48D1E4B7260003CF139 /* IntNodeArray.cpp */,
 				B872177A1E9D262D0039CF19 /* Tools */,
 				B87217791E9D25F90039CF19 /* Nodes */,
 			);
@@ -152,6 +145,20 @@
 			name = Trees;
 			sourceTree = "<group>";
 		};
+		B872177E1E9D286D0039CF19 /* Linear Data Structure */ = {
+			isa = PBXGroup;
+			children = (
+				B8F450E81E69C8C1007219B0 /* Implements Doubly Linked */,
+				B877F48E1E4B7260003CF139 /* IntNodeArray.hpp */,
+				B877F48D1E4B7260003CF139 /* IntNodeArray.cpp */,
+				B85F54EA1E48D5E800E3DE61 /* IntNode.hpp */,
+				B85F54E91E48D5E800E3DE61 /* IntNode.cpp */,
+				FF972EF61E5B8657002646B8 /* Array.hpp */,
+				B87FC1AB1E5CA375001A02F9 /* List.h */,
+			);
+			name = "Linear Data Structure";
+			sourceTree = "<group>";
+		};
 		B877F4921E4B7D44003CF139 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +174,7 @@
 		B8F450E81E69C8C1007219B0 /* Implements Doubly Linked */ = {
 			isa = PBXGroup;
 			children = (
+				B8161F4E1E672849000A44C0 /* DoublyLinkedList.hpp */,
 				B8161F4F1E672E59000A44C0 /* Stack.hpp */,
 				B8F450E91E69C908007219B0 /* DoubleList.hpp */,
 				B8F450EA1E69C92B007219B0 /* CircularList.hpp */,

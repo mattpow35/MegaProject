@@ -181,8 +181,152 @@ void BinarySearchTree<Type> :: insert(Type itemToInsert)
         {
             previous->setRightChild(insertMe);
         }
-        insertMe->setRoot(previous);
+        insertMe->setRootPointer(previous);
         
+    }
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: remove(Type getRifOfMe)
+{
+    if(root == nullptr)
+    {
+        cout << "Empty tree so removal is not possible" << endl;
+    }
+    else
+    {
+        BinarySearchTreeNode<Type> * current = root;
+        BinarySearchTreeNode<Type> * previous = nullptr;
+        bool hasBeenFound = false;
+        
+        while(current != nullptr && !hasBeenFound)
+        {
+            if(current->getNodeData() == getRidOfMe)
+            {
+                haseBeenFound = true;
+            }
+            else
+            {
+                previous = current;
+                if(getRidOfMe < current->getNodeData())
+                {
+                    current = current->getLeftChild();
+                }
+                else
+                {
+                    current = current->getRightChild();
+                }
+            }
+        }
+        
+        if (current == nullptr)
+        {
+            cerr << "Item not found, removal unsuccessful" << endl;
+        }
+        else if(hasBeenFound)
+        {
+            if(current == root)
+            {
+                removeNode(root);
+            }
+            else if(getRidOfMe < previous->getNodeData())
+            {
+                removeNode(previous->getLeftChil());
+            }
+            else
+            {
+                removeNode(previous->getRightChild());
+            }
+        }
+    }
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * & removeMe)
+{
+    BinarySearchTreeNode<Type> * current;
+    BinarySearchTreeNode<Type> * previous;
+    BinarySearchTreeNode<Type> * temp;
+    
+    previous = removeMe->getRootPointer();
+    
+    //Leaf - has no child
+    if(removeMe->getRightChild() == nullptr && removeMe->getLeftChild() == nullptr)
+    {
+        temp = removeMe;
+        removeMe = nullptr;
+        
+        if(previous != nullptr && removeMe->getNodeData() < previous->getNodeData())
+        {
+            previous->setLeftChild(removeMe);
+        }
+        else if(previous != nullptr && removeMe->getNodeData() > previous->getNodeData())
+        {
+            previous->setRightChild(removeMe);
+        }
+        
+        delete temp;
+    }
+    //Has only left child
+    else if(removeMe->getRightChild() == nullptr)
+    {
+        temp = removeMe;
+        removeMe = removeMe->getLeftChild();
+        
+        if(previous != nullptr && removeMe->getNodeData() < previous->getNodeData())
+        {
+            previous->setLeftChild(removeMe);
+        }
+        else if(previous != nullptr && removeMe->getNodeData() > previous->getNodeData())
+        {
+            previous->setRightChild(removeMe);
+        }
+        
+        removeMe->setRootPointer(previous);
+        delete temp;
+    }
+    //Has only right child
+    else if(removeMe->getleftChild() == nullptr)
+    {
+        temp = removeMe;
+        removeMe = removeMe->getRightChild();
+        
+        if(previous != nullptr && removeMe->getNodeData() < previous->getNodeData())
+        {
+            previous->setLeftChild(removeMe);
+        }
+        else if(previous != nullptr && removeMe->getNodeData() > previous->getNodeData())
+        {
+            previous->setRightChild(removeMe);
+        }
+        removeMe->setRootPointer(previous);
+        delete temp;
+    }
+    //Has both children
+    else
+    {
+        current = removeMe->getLeftChild();
+        previous = nullptr;
+        
+        while (current->getRightChild() != nullptr)
+        {
+            previous = current;
+            current = current->getRightChild();
+        }
+        
+        removeMe->setNodeData(current->getNodeData());
+        
+        if(previous == nullptr)
+        {
+            removeMe->setLeftChild(current->getLeftChild());
+            current->getLeftChild()->setRootPointer(removeMe);
+        }
+        else
+        {
+            previous->setRightChild(current->getLeftChild());
+            current->getLeftChild()->setRootPointer(previous);
+        }
+        delete current;
     }
 }
 

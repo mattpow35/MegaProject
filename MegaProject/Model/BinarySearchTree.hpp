@@ -413,6 +413,11 @@ void BinarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * removeMe)
         }
         delete current;
     }
+    
+    if (removeMe == nullptr || removeMe->getRootPointer() == nullptr)
+    {
+        setRoot(removeMe);
+    }
 }
 
 template <class Type>

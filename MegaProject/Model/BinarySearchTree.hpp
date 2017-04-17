@@ -29,7 +29,7 @@ protected:
     void preOrderTraversal(BinarySearchTreeNode<Type> * preStart);
     void postOrderTraversal(BinarySearchTreeNode<Type> * postStart);
     
-    void removeNode(BinarySearchTreeNode<Type> * & removable);
+    void removeNode(BinarySearchTreeNode<Type> * removable);
     
 public:
     BinarySearchTree();
@@ -98,7 +98,7 @@ void BinarySearchTree<Type> :: postOrderTraversal()
 template <class Type>
 bool BinarySearchTree<Type> :: isComplete(BinarySearchTreeNode<Type> * start)
 {
-    
+    return false;
 }
 
 template <class Type>
@@ -272,7 +272,7 @@ void BinarySearchTree<Type> :: insert(Type itemToInsert)
 }
 
 template <class Type>
-void BinarySearchTree<Type> :: remove(Type getRifOfMe)
+void BinarySearchTree<Type> :: remove(Type getRidOfMe)
 {
     if(root == nullptr)
     {
@@ -288,7 +288,7 @@ void BinarySearchTree<Type> :: remove(Type getRifOfMe)
         {
             if(current->getNodeData() == getRidOfMe)
             {
-                haseBeenFound = true;
+                hasBeenFound = true;
             }
             else
             {
@@ -316,7 +316,7 @@ void BinarySearchTree<Type> :: remove(Type getRifOfMe)
             }
             else if(getRidOfMe < previous->getNodeData())
             {
-                removeNode(previous->getLeftChil());
+                removeNode(previous->getLeftChild());
             }
             else
             {
@@ -327,7 +327,7 @@ void BinarySearchTree<Type> :: remove(Type getRifOfMe)
 }
 
 template <class Type>
-void BinarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * & removeMe)
+void BinarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * removeMe)
 {
     BinarySearchTreeNode<Type> * current;
     BinarySearchTreeNode<Type> * previous;
@@ -371,7 +371,7 @@ void BinarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * & removeM
         delete temp;
     }
     //Has only right child
-    else if(removeMe->getleftChild() == nullptr)
+    else if(removeMe->getLeftChild() == nullptr)
     {
         temp = removeMe;
         removeMe = removeMe->getRightChild();

@@ -18,6 +18,7 @@
 #include "Timer.hpp"
 #include "DoubleList.hpp"
 #include "Stack.hpp"
+#include "BinarySearchTree.hpp"
 
 using namespace std;
 
@@ -38,6 +39,7 @@ private:
     void testMemeQueue();
     void testNumberStack();
     void testDoubleListTiming();
+    void testBinarySearchTree();
 public:
     StructureController();
     void start();

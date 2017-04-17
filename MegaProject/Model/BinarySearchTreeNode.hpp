@@ -21,6 +21,7 @@ private:
     
 public:
     BinarySearchTreeNode();
+    ~BinarySearchTreeNode();
     BinarySearchTreeNode(Type data);
     
     BinarySearchTreeNode<Type> * getRootPointer();

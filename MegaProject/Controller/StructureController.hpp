@@ -19,6 +19,8 @@
 #include "DoubleList.hpp"
 #include "Stack.hpp"
 #include "BinarySearchTree.hpp"
+#include "CrimeData.hpp"
+#include "FileController.hpp"
 
 using namespace std;
 
@@ -40,6 +42,9 @@ private:
     void testNumberStack();
     void testDoubleListTiming();
     void testBinarySearchTree();
+    void testBinarySearchCrime();
+    void testAVLTreeOperations();
+    void testAVLCrimeData();
 public:
     StructureController();
     void start();

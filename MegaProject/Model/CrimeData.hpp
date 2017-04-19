@@ -11,6 +11,7 @@
 
 #include <string>
 #include <cmath>
+#include <sstream>
 
 using namespace std;
 
@@ -41,6 +42,7 @@ private:
     int year;
 public:
     CrimeData();
+    CrimeData(string currentCSVLine);
     
     string getDepartment() const;
     int getPopulation() const;
@@ -79,7 +81,7 @@ public:
     void setState(const string & state);
     void setAllPropertyCrime(const int & property);
     void setAllBurglary(const int & burglary);
-    void setAllLarcerny(const int & larceny);
+    void setAllLarceny(const int & larceny);
     void setAllMotor(const int & motor);
     void setAllViolent(const int & violent);
     void setAllAssault(const int & assault);
@@ -91,6 +93,8 @@ public:
     bool operator < (const CrimeData & other);
     bool operator > (const CrimeData & other);
     bool operator == (const CrimeData & other);
+    
+    friend ostream & operator << (ostream &outputStream, const CrimeData & outputData);
 };
 
 #endif /* CrimeData_hpp */

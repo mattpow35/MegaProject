@@ -19,7 +19,7 @@ private:
     BinarySearchTreeNode<Type> * leftRotation(BinarySearchTreeNode<Type> * parent);
     BinarySearchTreeNode<Type> * rightRotation(BinarySearchTreeNode<Type> * parent);
     BinarySearchTreeNode<Type> * leftRightRotation(BinarySearchTreeNode<Type> * parent);
-    BinarySearchTreeNode<Type> * rightLeftRotation(BinarySearcgTreeNode<Type> * parent);
+    BinarySearchTreeNode<Type> * rightLeftRotation(BinarySearchTreeNode<Type> * parent);
     
     BinarySearchTreeNode<Type> * balanceSubTree(BinarySearchTreeNode<Type> * parent);
     

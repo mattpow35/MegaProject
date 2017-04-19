@@ -11,11 +11,13 @@
 
 #include "DoubleList.hpp"
 #include "Meme.hpp"
-//#include "../Model/CrimeData.hpp"
+#include "../Model/CrimeData.hpp"
 #include <string> // String Type
 #include <fstream> //File operations
 #include <iostream> //console access
 #include <sstream> //String as Stream
+#include "BinarySearchTree.hpp"
+#include "AVLTree.h"
 
 using namespace std;
 
@@ -26,6 +28,9 @@ private:
 public:
     DoubleList<Meme> readMemeDataFromFileAsList(string filename);
     void writeMemeDataStatistics(DoubleList<Meme> source, string filename);
+    BinarySearchTree<CrimeData> readCrimeDataToBinarySearchTree(string filename);
+    AVLTree<CrimeData> readCrimeDataToAVLTree(string filename);
+    
     
 };
 

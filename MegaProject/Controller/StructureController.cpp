@@ -239,21 +239,13 @@ void StructureController :: testBinarySearchTree()
     BinarySearchTree<int> numbers;
     
     numbers.insert(9843);
-    
     numbers.insert(10);
-    
     numbers.insert(43);
-    
     numbers.insert(-123);
-    
     numbers.insert(23465);
-    
     numbers.insert(10); // won't go in
-    
     numbers.insert(43243);
-    
     numbers.insert(-45677654);
-    
     numbers.insert(92165);
     
     

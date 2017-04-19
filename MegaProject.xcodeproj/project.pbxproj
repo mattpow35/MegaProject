@@ -32,6 +32,7 @@
 /* Begin PBXFileReference section */
 		B8161F4E1E672849000A44C0 /* DoublyLinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DoublyLinkedList.hpp; path = Model/DoublyLinkedList.hpp; sourceTree = "<group>"; };
 		B8161F4F1E672E59000A44C0 /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Stack.hpp; path = Model/Stack.hpp; sourceTree = "<group>"; };
+		B8366D081EA7B10C00440145 /* AVLTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AVLTree.h; path = Model/AVLTree.h; sourceTree = "<group>"; };
 		B84C04D81E8BF4490036206E /* CrimeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CrimeData.cpp; path = Model/CrimeData.cpp; sourceTree = "<group>"; };
 		B84C04D91E8BF4490036206E /* CrimeData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CrimeData.hpp; path = Model/CrimeData.hpp; sourceTree = "<group>"; };
 		B84C04DB1E8BF95E0036206E /* FileController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileController.cpp; path = Controller/FileController.cpp; sourceTree = "<group>"; };
@@ -143,6 +144,7 @@
 			children = (
 				B87217781E9D24E70039CF19 /* Tree.hpp */,
 				B872177F1E9D29FC0039CF19 /* BinarySearchTree.hpp */,
+				B8366D081EA7B10C00440145 /* AVLTree.h */,
 			);
 			name = Trees;
 			sourceTree = "<group>";

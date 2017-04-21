@@ -37,6 +37,18 @@ public:
     void remove(Type value);
 };
 
+template <class Type>
+AVLTree<Type> :: AVLTree() : BinarySearchTree<Type>()
+{
+    this->root = nullptr;
+}
+
+template <class Type>
+AVLTree<Type> :: ~AVLTree()
+{
+    delete this->getRoot();
+}
+
 /*
  A negative value means the right is greater than the left
  */
@@ -128,5 +140,45 @@ BinarySearchTreeNode<Type> * balanceSubTree(BinarySearchTreeNode<Type> * parent)
     
     return parent;
 }
+
+template <class Type>
+BinarySearchTreeNode<Type> * AVLTree<Type> :: insertNode(BinarySearchTreeNode<Type> * parent, Type inserted)
+{
+    if(parent == nullptr)
+    {
+        parent = new BinarySearchTreeNode<Type>(inserted);
+        return parent;
+    }
+    else if(inserted < parent->getNodeData())
+    {
+        parent->setLeftChild(insertNode(parent->getLeftChild(), inserted));
+        parent = balanceSubTree(parent);
+    }
+    else if(inserted > parent->getNodeData())
+    {
+        parent->setRightChild(insertNode(parent->getRightChild(), inserted));
+        parent = balanceSubTree(parent);
+    }
+    return parent;
+}
+
+template <class Type>
+void AVLTree<Type> :: insert(Type item)
+{
+    insertedNode(this->getRoot(), item);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif /* AVLTree_h */

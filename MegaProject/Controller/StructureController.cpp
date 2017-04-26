@@ -238,6 +238,9 @@ void StructureController :: testBinarySearchTree()
 {
     BinarySearchTree<int> numbers;
     
+    cout << "Tree has nothing in it, size should be 0 and is " << numbers.getSize() << endl;
+    
+    cout << "Adding values to the list" << endl;
     numbers.insert(9843);
     numbers.insert(10);
     numbers.insert(43);
@@ -256,11 +259,20 @@ void StructureController :: testBinarySearchTree()
     
     numbers.inOrderTraversal();
     
+    cout << "The post order traversal is: " << endl;
     
+    numbers.postOrderTraversal();
     
+    cout << "The pre order traversal is: " << endl;
+    
+    numbers.preOrderTraversal();
+
     cout << "Height should be 4 and is: " << numbers.getHeight() << endl;
     
     cout << "Balanced should be false || 0 and is: " << numbers.isBalanced() << endl;
+    cout << "Trying to remove the number 100 " << endl;
+    numbers.remove(100);
+    cout << "Size should still be 8 and is " << numbers.getSize() << endl;
     
 }
 

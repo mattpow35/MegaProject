@@ -270,9 +270,9 @@ void StructureController :: testBinarySearchTree()
     cout << "Height should be 4 and is: " << numbers.getHeight() << endl;
     
     cout << "Balanced should be false || 0 and is: " << numbers.isBalanced() << endl;
-    cout << "Trying to remove the number 100 " << endl;
-    numbers.remove(100);
-    cout << "Size should still be 8 and is " << numbers.getSize() << endl;
+    cout << "Trying to remove the number 10 " << endl;
+    numbers.remove(10);
+    cout << "Size should be 7 and is " << numbers.getSize() << endl;
     
 }
 

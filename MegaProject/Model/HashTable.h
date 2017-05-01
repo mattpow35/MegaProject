@@ -36,6 +36,21 @@ public:
 };
 
 template <class Type>
+HashTable<Type> :: HashTable()
+{
+    this->capacity = 101;
+    this->efficiencyPercentage = .667;
+    this->size = 0;
+    this->hashTableStorage = Type * [capacity];
+}
+
+template <class Type>
+HashTable<Type> :: ~HashTable()
+{
+    delete [] hashTableStorage;
+}
+
+template <class Type>
 int HashTable<Type> :: getNextPrime()
 {
     int nextPrime = (this->capacity * 2) + 1;

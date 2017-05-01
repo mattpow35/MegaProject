@@ -20,7 +20,7 @@ private:
     long capacity;
     long size;
     double efficiencyPercentage;
-    Type * * hashTableStorage;
+    HashNode<Type> * * hashTableStorage;
     
     bool isPrime(long sampleNumber);
     void resize();
@@ -29,6 +29,7 @@ private:
     long handleCollision(Type data, long currentPosition);
 public:
     HashTable();
+    ~HashTable();
     void add(Type data);
     bool remove(Type data);
     void displayContents();
@@ -41,7 +42,7 @@ HashTable<Type> :: HashTable()
     this->capacity = 101;
     this->efficiencyPercentage = .667;
     this->size = 0;
-    this->hashTableStorage = Type * [capacity];
+    this->hashTableStorage = HashNode<Type> * [capacity];
 }
 
 template <class Type>

@@ -35,4 +35,52 @@ public:
     
 };
 
+template <class Type>
+int HashTable<Type> :: getNextPrime()
+{
+    int nextPrime = (this->capacity * 2) + 1;
+    
+    while(!isPrime(nextPrime))
+    {
+        nextPrime++;
+    }
+    
+    return nextPrime;
+}
+
+template <class Type>
+bool HashTable<Type> :: isPrime(long candidateNumber)
+{
+    if(candidateNumber <= 1)
+    {
+        return false;
+    }
+    else if(candidateNumber == 2 || candidateNumber == 3 || candidateNumber == 5 || candidateNumber == 7)
+    {
+        return false;
+    }
+    else if(candidateNumber % 2 == 0)
+    {
+        return false;
+    }
+    else
+    {
+        for(int next = 3; next <= sqrt(candidateNumber) + 1; next += 2)
+        {
+            if(candidateNumber % next == 0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+
+
+
+
+
+
+
 #endif /* HashTable_h */

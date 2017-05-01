@@ -11,6 +11,7 @@
 
 #include <cmath>
 #include <assert.h>
+#include "HashNode.hpp"
 
 using namespace std;
 template <class Type>

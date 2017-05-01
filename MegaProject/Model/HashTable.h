@@ -93,6 +93,34 @@ bool HashTable<Type> :: isPrime(long candidateNumber)
     }
 }
 
+template <class Type>
+long HashTable<Type> :: findPosition(HashNode<Type> * data)
+{
+    long insertPosition = data->getKey() % this->capacity;
+    return insertPosition;
+}
+
+template <class Type>
+long HashTable<Type> :: handleCollision(Type data, long currentPosition)
+{
+    long shift = 17;
+    
+    for(long position = currentPosition + shift; position != currentPosition; position += shift)
+    {
+        if(position > capacity)
+        {
+            position = position % capacity;
+        }
+        
+        if(hashTableStorage[position] == nullptr)
+        {
+            return position;
+        }
+        
+    }
+    
+    return -1;
+}
 
 
 

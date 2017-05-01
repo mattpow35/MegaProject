@@ -32,6 +32,7 @@
 /* Begin PBXFileReference section */
 		B8161F4E1E672849000A44C0 /* DoublyLinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DoublyLinkedList.hpp; path = Model/DoublyLinkedList.hpp; sourceTree = "<group>"; };
 		B8161F4F1E672E59000A44C0 /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Stack.hpp; path = Model/Stack.hpp; sourceTree = "<group>"; };
+		B81DCE4D1EB77A2600F9ABA3 /* HashTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HashTable.h; path = Model/HashTable.h; sourceTree = "<group>"; };
 		B8366D081EA7B10C00440145 /* AVLTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AVLTree.h; path = Model/AVLTree.h; sourceTree = "<group>"; };
 		B84C04D81E8BF4490036206E /* CrimeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CrimeData.cpp; path = Model/CrimeData.cpp; sourceTree = "<group>"; };
 		B84C04D91E8BF4490036206E /* CrimeData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CrimeData.hpp; path = Model/CrimeData.hpp; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 				B872177B1E9D263C0039CF19 /* Items to Stor */,
 				B872177A1E9D262D0039CF19 /* Tools */,
 				B87217791E9D25F90039CF19 /* Nodes */,
+				B81DCE4D1EB77A2600F9ABA3 /* HashTable.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";

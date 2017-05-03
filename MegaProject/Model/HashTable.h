@@ -122,6 +122,46 @@ long HashTable<Type> :: handleCollision(Type data, long currentPosition)
     return -1;
 }
 
+template <class Type>
+bool HashTable<Type> :: remove(Type  data)
+{
+    //Wrong way to remove in a hash table, this is too slow and not practical, it is a loop and will take longer.
+//    bool removed = false;
+//    for (long index = 0; index < capacity; index ++ )
+//    {
+//        if(hashTableStorage[index] != nullptr && hashTableStorage[index]->getData() == data)
+//        {
+//            hashTableStorage[index] = nullptr;
+//            removed = true;
+//        }
+//    }
+//    
+//    return removed;
+    bool removed = false;
+    
+    HashNode<Type> * find(data);
+    long hashIndex = findPosition(find);
+    if(hashTableStorage[hashIndex] != nullptr)
+    {
+        hashTableStorage[hashIndex] = nullptr;
+        removed = true;
+    }
+    
+    return removed;
+}
+
+template <class Type>
+void HashTable<Type> :: displayContents()
+{
+    for(long index = 0; index < capacity; index ++)
+    {
+        if(hashTableStorage[index] != nullptr)
+        {
+            cout << index << ": " << hashTableStorage[index]->getData() << endl;
+        }
+    }
+}
+
 
 
 

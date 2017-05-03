@@ -103,11 +103,10 @@
 			isa = PBXGroup;
 			children = (
 				B872177E1E9D286D0039CF19 /* Linear Data Structure */,
-				B872177D1E9D267F0039CF19 /* Trees */,
 				B872177B1E9D263C0039CF19 /* Items to Stor */,
 				B872177A1E9D262D0039CF19 /* Tools */,
 				B87217791E9D25F90039CF19 /* Nodes */,
-				B81DCE4D1EB77A2600F9ABA3 /* HashTable.h */,
+				B8CB96B31EBA13BE00B3061F /* Non linear data structures */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -177,6 +176,15 @@
 				B84C04DC1E8BF95E0036206E /* FileController.hpp */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		B8CB96B31EBA13BE00B3061F /* Non linear data structures */ = {
+			isa = PBXGroup;
+			children = (
+				B872177D1E9D267F0039CF19 /* Trees */,
+				B81DCE4D1EB77A2600F9ABA3 /* HashTable.h */,
+			);
+			name = "Non linear data structures";
 			sourceTree = "<group>";
 		};
 		B8F450E81E69C8C1007219B0 /* Implements Doubly Linked */ = {

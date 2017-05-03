@@ -44,7 +44,7 @@ HashTable<Type> :: HashTable()
     this->efficiencyPercentage = .667;
     this->size = 0;
     this->hashTableStorage = HashNode<Type> * [capacity];
-    std :: fill_n(hashTableStorage, updatedCapacity, nullptr);
+    std :: fill_n(hashTableStorage, capacity, nullptr);
 }
 
 template <class Type>

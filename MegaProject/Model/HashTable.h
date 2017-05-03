@@ -187,16 +187,39 @@ void HashTable<Type> :: resize()
             else
             {
                 long updatedPosition = handleCollision(temp, position);
-                while(tempStorage[updatedPosition] != nullptr)
-                {
-                    updatedPosition = handleCollision(temp, updatedPosition);
-                }
                 tempStorage[updatedPosition] = temp;
             }
         }
-        
     }
     hashTableStorage = tempStorage;
+}
+
+template <class Type>
+void HashTable<Type> :: add(Type data)
+{
+    this->size++;
+    if(((this->size * 1.000 / this->capacity) > this->efficiencyPercentage)
+    {
+        resize();
+    }
+       
+    HashNode<Type> * temp = new HashNode<Type>(data);
+    long index = findPosition(temp);
+       
+    if(hashTableStorage[index] == nullptr)
+    {
+        hashTableStorage[index] = temp;
+    }
+    else
+    {
+        long updatedPosition = handlCollision(temp, index);
+        hashTableStorage[updatedPosition] = temp;
+    }
+        
+    
+    
+    
+    
 }
 
 

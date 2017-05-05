@@ -23,6 +23,8 @@ public:
     Type remove(int index);
     Type getFromIndex(int index);
     Type getFromIndexFast(int index);
+    int indexOf(Type findMe);
+    int alternateIndexOf(Type findMe);
 };
 
 template <class Type>
@@ -124,6 +126,47 @@ Type DoubleList<Type> :: remove(int index)
     
     this->setSize(this->getSize() - 1);
     return derp;
+}
+
+template <class Type>
+int DoubleList<Type> :: indexOf(Type findMe)
+{
+    int index = -1;
+    BiDirectionalNode<Type> * searchPointer = this->getFront();
+    for(int spot = 0; spot < this->getSize(); spot ++)
+    {
+        if(findMe == searchPointer->getNodeData())
+        {
+            return spot;
+        }
+        searchPointer = searchPointer->getNextPointer();
+    }
+    return index;
+}
+
+template <class Type>
+int DoubleList<Type> :: alternateIndexOf(Type findMe)
+{
+    int alternate = 0;
+    for(BiDirectionalNode<Type> * search = this->getFront(); search != nullptr; search = search->getNextPointer)
+    {
+        if(findMe != search->getNodeData())
+        {
+            alternate ++;
+        }
+        else
+        {
+            return alternate;
+        }
+    }
+    if(alternate >= this->getSize())
+    {
+        return -1;
+    }
+    else
+    {
+        return alternate;
+    }
 }
 
 #endif /* DoubleList_h */

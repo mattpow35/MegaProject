@@ -18,6 +18,7 @@
 #include <sstream> //String as Stream
 #include "BinarySearchTree.hpp"
 #include "AVLTree.h"
+#include "Graph.hpp"
 
 using namespace std;
 

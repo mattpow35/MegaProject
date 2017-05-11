@@ -358,6 +358,29 @@ void StructureController :: testBinarySearchCrime()
 //    treeTimer.displayTimerInformation();
 //}
 
+void StructureController :: testGraph()
+{
+    Graph<string> myGraph;
+    
+    myGraph.addVertex("lacrosse");
+    myGraph.addVertex("Brighton");
+    myGraph.addVertex("computer science");
+    myGraph.addVertex("Drone videos");
+    myGraph.addVertex("Mavic Pro");
+    myGraph.addEdge(0,1);
+    myGraph.addEdge(0,2);
+    myGraph.addEdge(0,4);
+    myGraph.addEdgeUndirected(0,3);
+    myGraph.addEdgeUndirected(2,3);
+    myGraph.addEdgeUndirected(2,4);
+    
+    cout << "Breadth First Traversal: " << endl;
+    myGraph.breadthFirstTraversal(myGraph, 0);
+    cout << "Depth First Traversal: " << endl;
+    myGraph.depthFirstTraversal(myGraph, 0);
+    
+}
+
 void StructureController :: start()
 {
 //    cout << "Going to test the IntNodeArray" << endl;
@@ -377,6 +400,7 @@ void StructureController :: start()
    // testDoubleListTiming();
     //testNumberStack();
     
-    testBinarySearchTree();
+    //testBinarySearchTree();
+    testGraph();
 
 }

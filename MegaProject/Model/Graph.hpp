@@ -19,7 +19,7 @@ class Graph
 {
 private:
     static const int MAXIMUM = 20;
-    bool adjacencyMatrixy [MAXIMUM][MAXIMUM];
+    bool adjacencyMatrix [MAXIMUM][MAXIMUM];
     Type graphData[MAXIMUM];
     int vertexCount;
     void depthFirstTraversal(Graph<Type> graph, int vertex, bool markedVertices[]);
@@ -57,8 +57,8 @@ Graph<Type> :: Graph()
 template <class Type>
 Graph<Type> :: ~Graph()
 {
-    delete [] this->adjacencyMatrix;
-    delete [] this->graphData;
+//    delete [] this->adjacencyMatrix;
+//    delete [] this->graphData;
 }
 
 template <class Type>
@@ -131,7 +131,7 @@ void Graph<Type> :: addEdgeUndirected(int source, int target)
 }
 
 template <class Type>
-void Graph<Type> :: hasUndirectedConnection(int source, int target) const
+bool Graph<Type> :: hasUndirectedConnection(int source, int target) const
 {
     assert(source < size() && target < size());
     
@@ -142,7 +142,7 @@ void Graph<Type> :: hasUndirectedConnection(int source, int target) const
 }
 
 template <class Type>
-void Graph<Type> :: areConnected(int source, int target) const
+bool Graph<Type> :: areConnected(int source, int target) const
 {
     assert(source < size() && target < size());
     
@@ -215,7 +215,7 @@ void Graph<Type> :: breadthFirstTraversal(Graph<Type> currentGraph, int vertex)
     while(!vertexQueue.empty())
     {
         connections = currentGraph.neighbors(vertexQueue.front());
-        vertex.pop();
+        vertexQueue.pop();
         
         for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
         {

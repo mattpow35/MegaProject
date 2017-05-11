@@ -21,6 +21,7 @@
 #include "BinarySearchTree.hpp"
 #include "CrimeData.hpp"
 #include "FileController.hpp"
+#include "Graph.hpp"
 
 using namespace std;
 
@@ -45,6 +46,7 @@ private:
     void testBinarySearchCrime();
     void testAVLTreeOperations();
     void testAVLCrimeData();
+    void testGraph();
 public:
     StructureController();
     void start();

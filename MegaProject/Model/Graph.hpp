@@ -111,7 +111,7 @@ template <class Type>
 void Graph<Type> :: addEdge(int source, int target)
 {
     assert(source < size() && target < size());
-    adjacencyMatrix[source][target] = ture;
+    adjacencyMatrix[source][target] = true;
 }
 
 template <class Type>

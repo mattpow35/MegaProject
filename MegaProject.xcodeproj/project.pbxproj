@@ -58,6 +58,7 @@
 		B8DD917A1E648CFB00939DA5 /* BiDirectionalNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BiDirectionalNode.hpp; sourceTree = "<group>"; };
 		B8F450E91E69C908007219B0 /* DoubleList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DoubleList.hpp; path = Model/DoubleList.hpp; sourceTree = "<group>"; };
 		B8F450EA1E69C92B007219B0 /* CircularList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = CircularList.hpp; path = Model/CircularList.hpp; sourceTree = "<group>"; };
+		FF1735D41EC4192400182BF1 /* Graph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Graph.hpp; path = Model/Graph.hpp; sourceTree = "<group>"; };
 		FF5B7A661E89C11A003DA3AD /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = Model/Timer.cpp; sourceTree = "<group>"; };
 		FF5B7A671E89C11A003DA3AD /* Timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Timer.hpp; path = Model/Timer.hpp; sourceTree = "<group>"; };
 		FF972EF61E5B8657002646B8 /* Array.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Array.hpp; path = Model/Array.hpp; sourceTree = "<group>"; };
@@ -183,6 +184,7 @@
 			children = (
 				B872177D1E9D267F0039CF19 /* Trees */,
 				B81DCE4D1EB77A2600F9ABA3 /* HashTable.h */,
+				FF1735D41EC4192400182BF1 /* Graph.hpp */,
 			);
 			name = "Non linear data structures";
 			sourceTree = "<group>";

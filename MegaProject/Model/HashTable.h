@@ -25,9 +25,9 @@ private:
     
     bool isPrime(long sampleNumber);
     void resize();
-    long nextPrime(long current);
-    long findPosition(Type data);
-    long handleCollision(Type data, long currentPosition);
+    long nextPrime();
+    long findPosition(HashNode<Type> * data);
+    long handleCollision(HashNode<Type> * data, long currentPosition);
 public:
     HashTable();
     ~HashTable();
@@ -50,7 +50,7 @@ HashTable<Type> :: HashTable()
     this->capacity = 101;
     this->efficiencyPercentage = .667;
     this->size = 0;
-    this->hashTableStorage = HashNode<Type> * [capacity];
+    this->hashTableStorage = new HashNode<Type> * [capacity];
     std :: fill_n(hashTableStorage, capacity, nullptr);
 }
 
@@ -109,7 +109,7 @@ long HashTable<Type> :: findPosition(HashNode<Type> * data)
 }
 
 template <class Type>
-long HashTable<Type> :: handleCollision(Type data, long currentPosition)
+long HashTable<Type> :: handleCollision(HashNode<Type> * data, long currentPosition)
 {
     long shift = 17;
     
@@ -206,7 +206,7 @@ template <class Type>
 void HashTable<Type> :: add(Type data)
 {
     this->size++;
-    if(((this->size * 1.000 / this->capacity) > this->efficiencyPercentage)
+    if(((this->size * 1.000 / this->capacity) > this->efficiencyPercentage))
     {
         resize();
     }
@@ -220,13 +220,9 @@ void HashTable<Type> :: add(Type data)
     }
     else
     {
-        long updatedPosition = handlCollision(temp, index);
+        long updatedPosition = handleCollision(temp, index);
         hashTableStorage[updatedPosition] = temp;
     }
-        
-    
-    
-    
     
 }
 

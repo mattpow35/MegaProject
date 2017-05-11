@@ -22,6 +22,7 @@
 #include "CrimeData.hpp"
 #include "FileController.hpp"
 #include "Graph.hpp"
+#include "HashTable.h"
 
 using namespace std;
 
@@ -47,6 +48,7 @@ private:
     void testAVLTreeOperations();
     void testAVLCrimeData();
     void testGraph();
+    void hashTableUse();
 public:
     StructureController();
     void start();

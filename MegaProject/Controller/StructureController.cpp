@@ -381,6 +381,28 @@ void StructureController :: testGraph()
     
 }
 
+void StructureController :: hashTableUse()
+{
+    HashTable<string> myHashTable;
+    
+    myHashTable.add("CTEC");
+    myHashTable.add("computer science");
+    myHashTable.add("lacrosse");
+    myHashTable.add("summer");
+    myHashTable.add("drone");
+    myHashTable.add("brighton");
+    myHashTable.add("lifeguard");
+    myHashTable.add("pool");
+    myHashTable.add("hash");
+    myHashTable.add("mavic pro");
+    
+    
+    cout << "The size of my hash table is: " << myHashTable.getSize() << endl;
+    cout << "Displaying contents of my hash table: " << endl;
+    myHashTable.displayContents();
+    
+}
+
 void StructureController :: start()
 {
 //    cout << "Going to test the IntNodeArray" << endl;
@@ -401,6 +423,7 @@ void StructureController :: start()
     //testNumberStack();
     
     //testBinarySearchTree();
-    testGraph();
+    //testGraph();
+    hashTableUse();
 
 }

@@ -562,10 +562,6 @@ bg=light_gray</panel_attributes>
     <panel_attributes>Model :: BinarySearchTree&lt;Type&gt;
 --
 - root : BinarySearchTreeNode&lt;Type&gt; *
-- size :  int (inherited)
-- height : int (inherited)
-- complete : bool (inherited)
-- balanced : bool (inherited)
 --
 + BinarySearchTree() : constructor
 + ~BinarySerachTree() : destructor
@@ -573,7 +569,14 @@ bg=light_gray</panel_attributes>
 + getRoot() : BinarySearchTreeNode&lt;Type&gt; *
 + setRoot(BinarySearchTreeNode&lt;Type&gt; * root) : void
 
-- calculateSize(BinarySearchTreeNode&lt;Type&gt; *) : int
+*Recursive Helper Methods*
+# calculateSize(BinarySearchTreeNode&lt;Type&gt; *) : int
+# calculateHeight(BinarySearchTreeNode&lt;Type&gt; *) : int
+# isComplete(BinarySearchTreeNode&lt;Type&gt; *) : bool
+# isBalanced(BinarySearchTreeNode&lt;Type&gt; *) : bool
+
+# removeNdoe(Binary
+
 
 - inOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void
 - preOrderTraversal(BinarySearchTreeNode&lt;Type&gt;  *) : void

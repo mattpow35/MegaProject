@@ -60,6 +60,7 @@ HashTable<Type> :: ~HashTable()
     delete [] hashTableStorage;
 }
 
+//helper method to find the next prime number for the hash function
 template <class Type>
 long HashTable<Type> :: nextPrime()
 {
@@ -73,6 +74,7 @@ long HashTable<Type> :: nextPrime()
     return nextPrime;
 }
 
+//Helper method foir next prime that decides if a number is prime or not
 template <class Type>
 bool HashTable<Type> :: isPrime(long candidateNumber)
 {
@@ -101,13 +103,15 @@ bool HashTable<Type> :: isPrime(long candidateNumber)
     }
 }
 
+//Finds the positin that an item will be inserted into
 template <class Type>
 long HashTable<Type> :: findPosition(HashNode<Type> * data)
 {
     long insertPosition = data->getKey() % this->capacity;
     return insertPosition;
 }
-
+//If the position is either already taken or out of bounds
+//a new position is found by shifting it by a set factor.
 template <class Type>
 long HashTable<Type> :: handleCollision(HashNode<Type> * data, long currentPosition)
 {
@@ -130,6 +134,8 @@ long HashTable<Type> :: handleCollision(HashNode<Type> * data, long currentPosit
     return -1;
 }
 
+//Used to find and remove a value from the hash table,
+// returns true if it is removed.
 template <class Type>
 bool HashTable<Type> :: remove(Type data)
 {
@@ -158,6 +164,8 @@ bool HashTable<Type> :: remove(Type data)
     return removed;
 }
 
+
+//Prints out all the contents of the hash table.
 template <class Type>
 void HashTable<Type> :: displayContents()
 {
@@ -170,6 +178,9 @@ void HashTable<Type> :: displayContents()
     }
 }
 
+
+//Resizes the list that the hash table uses when more spots are needed
+//Creates a new list to move everything into and makes it the new hashtable.
 template <class Type>
 void HashTable<Type> :: resize()
 {
@@ -202,6 +213,7 @@ void HashTable<Type> :: resize()
     hashTableStorage = tempStorage;
 }
 
+//Adds to the hashtbale and resizing it if needed
 template <class Type>
 void HashTable<Type> :: add(Type data)
 {

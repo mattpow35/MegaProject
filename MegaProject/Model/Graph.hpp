@@ -84,6 +84,7 @@ Type Graph<Type> :: operator[](int vertex) const
     return graphData[vertex];
 }
 
+//Adds a vertex, which is a data point on the graph
 template <class Type>
 void Graph<Type> :: addVertex(const Type& value)
 {
@@ -100,6 +101,7 @@ void Graph<Type> :: addVertex(const Type& value)
     graphData[newVertexNumber] = value;
 }
 
+//Removes edge, edges of connections
 template <class Type>
 void Graph<Type> :: removeEdge(int source, int target)
 {
@@ -107,6 +109,8 @@ void Graph<Type> :: removeEdge(int source, int target)
     adjacencyMatrix[source][target] = false;
 }
 
+//Adds a connection between two vertices, from one to the next
+//One way
 template <class Type>
 void Graph<Type> :: addEdge(int source, int target)
 {
@@ -114,6 +118,7 @@ void Graph<Type> :: addEdge(int source, int target)
     adjacencyMatrix[source][target] = true;
 }
 
+//Removes a connection going in both directions
 template <class Type>
 void Graph<Type> :: removeEdgeUndirected(int source, int target)
 {
@@ -121,7 +126,7 @@ void Graph<Type> :: removeEdgeUndirected(int source, int target)
     adjacencyMatrix[source][target] = false;
     adjacencyMatrix[target][source] = false;
 }
-
+//Adds a connection in both directions to the node and back to the first node.
 template <class Type>
 void Graph<Type> :: addEdgeUndirected(int source, int target)
 {
@@ -129,7 +134,7 @@ void Graph<Type> :: addEdgeUndirected(int source, int target)
     adjacencyMatrix[source][target] = true;
     adjacencyMatrix[target][source] = true;
 }
-
+//Checks to see if the edge goes both ways
 template <class Type>
 bool Graph<Type> :: hasUndirectedConnection(int source, int target) const
 {
@@ -140,7 +145,7 @@ bool Graph<Type> :: hasUndirectedConnection(int source, int target) const
     
     return isAnEdge;
 }
-
+//Check to see if two vertices are connected by an edge
 template <class Type>
 bool Graph<Type> :: areConnected(int source, int target) const
 {
@@ -152,7 +157,7 @@ bool Graph<Type> :: areConnected(int source, int target) const
     return isAnEdge;
 }
 
-
+//Checks to see who a vertex is connected to and returns all the values that are connected to it in a set
 template <class Type>
 std::set<int> Graph<Type> :: neighbors(int vertex) const
 {
@@ -169,7 +174,7 @@ std::set<int> Graph<Type> :: neighbors(int vertex) const
     
     return vertexNeighbors;
 }
-
+//Recursive traverasal that goes as far down the graph as possible first.
 template <class Type>
 void Graph<Type> :: depthFirstTraversal(Graph<Type> currentGraph, int vertex)
 {
@@ -178,7 +183,7 @@ void Graph<Type> :: depthFirstTraversal(Graph<Type> currentGraph, int vertex)
     std::fill_n(visitedVertices, currentGraph.size(), false);
     depthFirstTraversal(currentGraph, vertex, visitedVertices);
 }
-
+//Depth first traversal recursive helper method
 template <class Type>
 void Graph<Type> :: depthFirstTraversal(Graph<Type> currentGraph, int vertex, bool * visited)
 {
@@ -197,7 +202,7 @@ void Graph<Type> :: depthFirstTraversal(Graph<Type> currentGraph, int vertex, bo
     }
     
 }
-
+//iterative traversal that goes as wide as possible on the graph first.
 template <class Type>
 void Graph<Type> :: breadthFirstTraversal(Graph<Type> currentGraph, int vertex)
 {

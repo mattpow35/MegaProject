@@ -83,6 +83,10 @@ void BinarySearchTree<Type> :: setRoot(BinarySearchTreeNode<Type> * root)
     this->root = root;
 }
 
+/*Methods used to call the 
+ recursive helper methods for traversals
+ */
+
 template <class Type>
 void BinarySearchTree<Type> :: inOrderTraversal()
 {
@@ -101,6 +105,8 @@ void BinarySearchTree<Type> :: postOrderTraversal()
     postOrderTraversal(root);
 }
 
+//Checks to see if the tree is complete
+//Are there any empty leafs
 template <class Type>
 bool BinarySearchTree<Type> :: isComplete(BinarySearchTreeNode<Type> * start, int index, int size)
 {
@@ -117,6 +123,10 @@ bool BinarySearchTree<Type> :: isComplete(BinarySearchTreeNode<Type> * start, in
     return (isComplete(start->getLeftChild(), 2 * index + 1, size) && isComplete(start->getRightChild(), 2 * index + 2, size));
 }
 
+//Checks the balance of the tree
+//Do the left and right sides of the
+//tree have equal heights or close
+//to equal heights
 template <class Type>
 bool BinarySearchTree<Type> :: isBalanced(BinarySearchTreeNode<Type> * start)
 {
@@ -142,7 +152,7 @@ bool BinarySearchTree<Type> :: isBalanced(BinarySearchTreeNode<Type> * start)
     
     return false;
 }
-
+//Finds the height so it can be checked for balance
 template <class Type>
 int BinarySearchTree<Type> :: calculateHeight(BinarySearchTreeNode<Type> * start)
 {
@@ -155,7 +165,7 @@ int BinarySearchTree<Type> :: calculateHeight(BinarySearchTreeNode<Type> * start
         return 1 + max(calculateHeight(start->getLeftChild()), calculateHeight(start->getRightChild()));
     }
 }
-
+//Counts the number of nodes to see size of the tree
 template <class Type>
 int BinarySearchTree<Type> :: calculateSize(BinarySearchTreeNode<Type> * start)
 {
@@ -213,6 +223,7 @@ void BinarySearchTree<Type> :: postOrderTraversal(BinarySearchTreeNode<Type> * p
     }
 }
 
+//Getters used to find minimum and maximum value
 template <class Type>
 BinarySearchTreeNode<Type> * BinarySearchTree<Type> :: getRightMostChild(BinarySearchTreeNode<Type> * current)
 {
@@ -236,7 +247,7 @@ BinarySearchTreeNode<Type> * BinarySearchTree<Type> :: getLeftMostChild(BinarySe
     
     return temp;
 }
-
+//trys to find an item in the tree, returns true if it is in there
 template <class Type>
 bool BinarySearchTree<Type> :: contains(Type itemToFind)
 {
@@ -266,7 +277,7 @@ bool BinarySearchTree<Type> :: contains(Type itemToFind)
     }
 }
 
-
+//Insterts item into tree, will not insert if item already exists
 template <class Type>
 void BinarySearchTree<Type> :: insert(Type itemToInsert)
 {
@@ -310,7 +321,7 @@ void BinarySearchTree<Type> :: insert(Type itemToInsert)
         
     }
 }
-
+//Removes item from tree only if the item is in the tree
 template <class Type>
 void BinarySearchTree<Type> :: remove(Type getRidOfMe)
 {
@@ -366,6 +377,10 @@ void BinarySearchTree<Type> :: remove(Type getRidOfMe)
     }
 }
 
+//Helper mehtod used in the remove method
+//This method actually gets rid of the node
+//executes under 4 conditions, there are no children,
+//left has a child, right has a child, or both have children
 template <class Type>
 void BinarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * removeMe)
 {
@@ -487,6 +502,7 @@ bool BinarySearchTree<Type> :: isComplete()
     return isComplete(root, index, size);
 }
 
+//Uses get left most and right most to find min and max value of the tree.
 template <class Type>
 Type BinarySearchTree<Type> :: findMinimum()
 {
